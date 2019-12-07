@@ -1,0 +1,422 @@
+[
+
+    {
+
+        "pub_key" : "BEhaya95x8ofqBjdmj8DaWw9dUCewtLjrGp6ykG+j+jtvRPEOER+slRH994YSyGNr9Nufwl9OCcEiDZIXrzhE2o=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "35.160.75.220",
+
+            "port" : 8080,
+
+            "name" : "node-1"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BPJC1tpJn2mDCnwdcvR5EVbYhwuSVOeqkpPWIYFfRoh4xb4FyFQaHoAiNY+ipZSNFxV80kzZz3+FaX4IRrpT09g=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.202.46.131",
+
+            "port" : 8080,
+
+            "name" : "node-2"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BEu3qNPgeqk5NK9PbmHz76Yve2smjq8NJWR0IInKd7DZ0+hvvZTwrkGh6rx0qNENHwe/dpqB0sKQAmtlA0bj+u4=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.213.240.169",
+
+            "port" : 8080,
+
+            "name" : "node-3"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BAaIqE80qkiTjURiYirqnWUDKHBlMhszyCBffHv9eMMCPqVOXQEmyfnwuOogHp8Yo1la32F7tbSivbmm0RfLLrY=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.237.111.99",
+
+            "port" : 8080,
+
+            "name" : "node-4"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BPgCPZ5C4IJbWwUNL8tZ6ztosJDc/LyRHiAGBYy2QjKQR3fjmv5TwEPSotfsTmHA/j/9AF3AJF5BDfFXwmcvmz4=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "34.217.74.104",
+
+            "port" : 8080,
+
+            "name" : "node-5"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BJIxCYmqq6lIvM3e2289GoidILsx9WODfdbYWjDvOEUGlhpSoLClAUwRpVjabCEZqMGsbkB8JXtPT1eUg67vPP8=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "34.219.160.141",
+
+            "port" : 8080,
+
+            "name" : "node-6"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BDdCMFpsEK7fOAsVWtxBbmfOGYGHwM6cba5a0AmCBvnUQ9V/P/5A2+KjvXMbr6ubMK+XBVFr4yXe4Nchhbylgdw=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.236.158.20",
+
+            "port" : 8080,
+
+            "name" : "node-7"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BBH+buxNmXB3alwDI51qICI3SzWRAZTikiebfywFTZdPfHis/eDoyL3iC3/pW+K7kW1kivHsrh4AWgBSmhsN6Gw=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.173.196.46",
+
+            "port" : 8080,
+
+            "name" : "node-8"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BDe0ZDsZXeqCsHts3fRguKZpg6aafm9DfeC5fw3njSf/olrDRG26lTuATjRHYoIYURJ+Dlo5SU9JCWLbZyEeFjc=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.144.106.84",
+
+            "port" : 8080,
+
+            "name" : "node-9"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BKVMllm1SO17Ttmy8ldqjPp1sq3zJokk6aUKmBUN160TUgYpy/4ROLCvwHXnXTF+FFZUEK9vbAerytoIWk3ieNE=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "3.89.137.35",
+
+            "port" : 8080,
+
+            "name" : "node-10"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BHpWI2f3fyQCM/FDfRrcrjdTydsd78tGlnWFxB/ODpX6ar3u1YG/HMlWuh8K4L2zYxAHF3HaLNUFTyDv4Ou+CJM=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.164.116.209",
+
+            "port" : 8080,
+
+            "name" : "node-11"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BK4ZXjNxLxEoXeFpXavOQXMMlqr8ZycQox2msSQbpE3k4aqGjsD3rPhwWl+X6as3ngyT86QgWJ/00T9Sro/dCOc=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "54.234.149.245",
+
+            "port" : 8080,
+
+            "name" : "node-12"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BDc9rSWaBVkqs0FXLzX+Fr6Cot9w7rdHP5A3cFtwfhT5cBTJahx2LrYWK+LM0kPJJayXkBb4qviEkpcWTX6Hn8U=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "3.89.99.163",
+
+            "port" : 8080,
+
+            "name" : "node-13"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BCUo+E6o3iw5WVG+3V5oD/ENKrXuGcAP/rZBgBn89m1uQwA7R8YKdQQVi1M41hJ4rI820SCxgk85LrZLHjZyZIE=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "3.208.19.17",
+
+            "port" : 8080,
+
+            "name" : "node-14"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BMywrNaGR5JEU5f+HR52538Yyc7Li5fMDckp6+KWIjVs0jnYyTF2jWMdTBIUNaQM9HUVQuwFIDLJrInQWoONhHA=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.163.61.40",
+
+            "port" : 8080,
+
+            "name" : "node-15"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BP48pYnkCfOuPRBUqH3GkpLZRDvixKx6F9Td6NJkKMYVG078D2Iv/5m6ufsb4MX31nUsGgPNAbVBhD1I3xhBHmw=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.163.74.130",
+
+            "port" : 8080,
+
+            "name" : "node-16"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BGYnMdnhN0x4vPHv/o6pdvlIc1pnArm52QVgpOXgyp0jRFAFl8SLf6qKno5jFYdvy8Ge72yOYagyV0Fno1qYG3k=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.163.116.135",
+
+            "port" : 8080,
+
+            "name" : "node-17"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BB1sRY+G3Iw8r7W1QQKv5Ha4xkVa6blbmQfhLFnTmU9+IcfK14+tYBPw72HYtw6eaurS2RIV2nN5FuqYItLuE88=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.162.207.0",
+
+            "port" : 8080,
+
+            "name" : "node-18"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BIJRwREruFbNwsRFeuLtEJdoCST+/V6hEpoAU8qSHljWZCUoayX0Ai2ohOAREPt/dxNR9MaL5YoHBnau7LCCLgg=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.162.54.140",
+
+            "port" : 8080,
+
+            "name" : "node-19"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BA2a6408GLqQXV5KlpkfIRjCCp7Mrt5JjqwsmZzw+JA0vGdTARhvTshR087gdRdDUnsCYcR0bg/pB1WHCf+6tq4=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.162.49.121",
+
+            "port" : 8080,
+
+            "name" : "node-20"
+
+        }
+
+    } ,
+
+    {
+
+        "pub_key" : "BPhmvSY6ZbznTQBpYeKc+SA9Jt15PFWIiQGTTd6tR1rJpzLTqSxJknsiz+CZSdUwzlqCwNfALutz/vBRYpcYSgo=",
+
+        "voting_power" : "90",
+
+        "network_addr" : {
+
+            "id" : "1000",
+
+            "ip" : "18.163.114.129",
+
+            "port" : 8080,
+
+            "name" : "node-21"
+
+        }
+
+    } ]
+    
