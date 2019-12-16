@@ -22,7 +22,11 @@ To achieve the full performance of the Meter network, the recommended hardware c
 # Setting up a full node
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
-1. Obtain the delegates.json file from the GitHub repo to your home directory (the following instructions assume delegates.json is in /home/ubuntu).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee
+1. Obtain the delegates.json file from the GitHub repo to your home directory (the following instructions assume delegates.json is in /home/ubuntu).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
+```
+git clone https://github.com/meterio/warringstakes
+cp ./warringstakes/delegates.json .
+```
 
 2. Launch the Meter container
 
@@ -45,14 +49,19 @@ CONTAINER ID        IMAGE                      COMMAND                  CREATED 
 ```
 ```
 sudo docker container stop metertest              //stop the container
-sudo docker container start metertest             //stop the container
+sudo docker container start metertest             //start the container
 sudo docker container rm metertest                //remove the container
 sudo docker image ls
 sudo docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
 sudo docker container exec -it metertest bash     //launch a bash in the container
 ```
 
-The log files can be located inside the container, under /var/log/supervisor directory.  If you file any bugs, please remember to attach the logs for PoS (both the stderr and stdout) in the bug.  After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
+The log files can be located inside the container, under /var/log/supervisor directory.  If you file any bugs, please remember to attach the logs for PoS (both the stderr and stdout) in the bug. You could either copy and paste the log or use
+```
+sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
+```
+
+After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
 
 3. Download [Meter desktop wallet](https://meter.io/developers) and connect to your own full node
 In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
