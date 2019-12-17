@@ -23,3 +23,14 @@ We will tag the issues with different priorities and give different points based
 P3 - low severity of bug or test that you have run. Example: Bugs in our configuration or setup
 P2 - medium severity bug or test. Example: Bugs that impacting the performance or stall the consensus
 P1 - high severity bug or some major features on Meter. Example: Bugs that break the security of the network.  Porting a great EVM smart contract like Uniswap to Meter
+
+Rough points guidelines (we reserve the rights on how to interpret them and making needed adjustments)
+Launch full node: 100
+Enters the committee: 100
+Valid P3 BUG: 100
+Valid p2 BUG: 800
+Valid P1 BUG: 3000
+
+Special Ecosystem Features: depend on the complexity and how useful are the features
+
+First 5 validators who successfully enter the committee receive and additional 500 points. The bonus points go down by 100 for each additional 5 validators.
