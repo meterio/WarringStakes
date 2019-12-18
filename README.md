@@ -88,8 +88,19 @@ Please be aware that the public.key file in the docker container is generated wh
 3. Become a delegate node
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. more APIs will soon be added for additional information regarding to this.
 
-4. Become a committee node
-Since the current committee size is the same as the delegate size.  At the next epoch, if the delegate is online when the new committee starts, it will automatically join the committee.  On the Warring Stakes testnet, the Meter team had an initial set of 21 nodes (we will gradually increase the number of nodes as the network become more stable) each staked 2 MTRG.  As long as a delegate node stakes more than 2 MTRG, it will replace one of the Meter team nodes. Within the committee, each committee member will take turns to propose blocks.  We are still implementing the RPC interface for display committee information.  However, if you search the log, you will find "I am in committee", which signals the node is already in the committee participating in the consensus.
 
-5. Retire a committee node
-If a committee node would like to stop participating in the consensus, it should "uncandidate" itself from the committee node list by choosing "uncandidate" in the wallet.  Please be aware that although the "uncadidate" transaction is performed immediately, the node can not go offline until the end of the current epoch.  On the current Warring Stakes testnet, we have 21 nodes each staked 2 MTRG tokens.  Once you "uncadidate" your node, one of the 21 nodes will come in to take over the committee node.  
+# Upgrade meter docker image without losing any data/configuration
+
+1. Pull the latest meter docker image
+`docker pull dfinlab/meter-all-in-one:latest`
+
+2. Backup meter data/config folder
+`docker cp -r metertest:/root/.org.dfinlab.meter [your-backup-folder]/meter-data`
+
+3. Drop the current docker container
+`docker rm -f metertest`
+
+4. Restart the docker container with an extra mount flag `-v [your-back-up-folder]/meter-data:/root/.org.dfinlab.meter`
+```
+sudo docker pull dfinlab/meter-all-in-one; sudo docker run -v [your-back-up-folder]/meter-data:/root/.org.dfinlab.meter -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
+```
