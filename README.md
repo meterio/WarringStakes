@@ -89,18 +89,18 @@ Please be aware that the public.key file in the docker container is generated wh
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. more APIs will soon be added for additional information regarding to this.
 
 
-# Upgrade meter docker image without losing any data/configuration
+# Update meter docker image without losing any data/configuration
 
 1. Pull the latest meter docker image
 `docker pull dfinlab/meter-all-in-one:latest`
 
 2. Backup meter data/config folder
-`docker cp -r metertest:/root/.org.dfinlab.meter [your-backup-folder]/meter-data`
+`docker cp -r metertest:/pos [your-backup-folder]/meter-data`
 
 3. Drop the current docker container
 `docker rm -f metertest`
 
 4. Restart the docker container with an extra mount flag `-v [your-back-up-folder]/meter-data:/root/.org.dfinlab.meter`
 ```
-sudo docker pull dfinlab/meter-all-in-one; sudo docker run -v [your-back-up-folder]/meter-data:/root/.org.dfinlab.meter -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
+sudo docker pull dfinlab/meter-all-in-one; sudo docker run -v [your-back-up-folder]/meter-data:/pos -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
 ```
