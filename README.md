@@ -95,19 +95,22 @@ If a candidate receives enough votes and ranked in the top N candidate nodes, it
 # Update meter docker image without losing any data/configuration
 
 1. Backup meter data/config folder
-```sudo docker cp metertest:/pos /home/ubuntu/meter-data
+```
+sudo docker cp metertest:/pos /home/ubuntu/meter-data
 ```
 If you look into the meter-data directory, there is one file called consensus.key  It is the BLS key for the last epoch when the node was in the committee.  We suggest removing this file each time when you restart the container
 
 2. Stop and delete the current docker container
-```sudo docker rm -f metertest
+```
+sudo docker rm -f metertest
 ```
 
 3. Pull the latest meter docker image
-```sudo docker pull dfinlab/meter-all-in-one:latest
+```
+sudo docker pull dfinlab/meter-all-in-one:latest
 ```
 
-4. Start the container and mount the host data backup folder to the pos folder inside the container `-v /home/ubuntu/meter-data:/pos`
+4. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
 sudo docker run -v /home/ubuntu/meter-data:/pos -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4
 ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" --network host --name metertest -d dfinlab/meter-all-in-one:latest
