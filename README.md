@@ -1,12 +1,4 @@
 # Warring Stakes Leader Board
-| Git Handle           | Points  |
-|----------------------|---------|
-| bentiancai629        | 700     |
-| mstephen5            | 700     |
-| includeleec          | 700     |
-| xunppchen            | 700     |
-| Hashquark-research   | 600     |
-
 
 # Instructions for Participating in the Meter Test Net
 
@@ -103,14 +95,17 @@ If a candidate receives enough votes and ranked in the top N candidate nodes, it
 # Update meter docker image without losing any data/configuration
 
 1. Backup meter data/config folder
-```sudo docker cp metertest:/pos /home/ubuntu/meter-data```
+```sudo docker cp metertest:/pos /home/ubuntu/meter-data
+```
 If you look into the meter-data directory, there is one file called consensus.key  It is the BLS key for the last epoch when the node was in the committee.  We suggest removing this file each time when you restart the container
 
 2. Stop and delete the current docker container
-```sudo docker rm -f metertest```
+```sudo docker rm -f metertest
+```
 
 3. Pull the latest meter docker image
-```sudo docker pull dfinlab/meter-all-in-one:latest```
+```sudo docker pull dfinlab/meter-all-in-one:latest
+```
 
 4. Start the container and mount the host data backup folder to the pos folder inside the container `-v /home/ubuntu/meter-data:/pos`
 ```
