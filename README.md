@@ -84,12 +84,12 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 | 9100                 | node explorers   |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidate" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node (currently the port configuration is not used, the code will always port 8670 for P2P communications and messaging).  When filling in the "Candidate" tab, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/Staking/candidates  
+In the desktop wallet, under the "Candidate" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node (currently the port configuration is not used, the code will always port 8670 for P2P communications and messaging).  When filling in the "Candidate" tab, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates  
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
 3. Become a delegate node
-If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/Staking/delegates
+If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/staking/delegates
 
 
 # Update meter docker image without losing any data/configuration
@@ -112,7 +112,6 @@ sudo docker pull dfinlab/meter-all-in-one:latest
 
 4. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
-sudo docker run -v /home/ubuntu/meter-data:/pos -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4
-ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" --network host --name metertest -d dfinlab/meter-all-in-one:latest
+sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
 ```
 After step 1 is completed, you will only need to repeat step 2 to 4 each time upgrading the docker image

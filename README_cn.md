@@ -113,7 +113,9 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 2.通过桌面钱包成为委托节点的候选人。
 
-在桌面钱包的“Candidate”选项下，您可以通过质押至少 2个MTRG 代币并输入节点所需的所有信息来自行选择成为委托节点的候选人 （当前端口暂时不要改动，代码会使用端口8670，用于P2P通信和消息传递），pub key一栏的内容并不是账户的公钥，而是在Docker Container pos目录中public.key里的内容，这个public.key和master.key两个文件是节点运维的公钥和私钥，请将他们备份好。候选人设置结束后您可以通过 http://IPaddrOfYourNode:8669/staking/candidates 马上检查自己是否已经变成候选人。
+在桌面钱包的"Candidate"选项下，您可以通过质押至少 2个MTRG 代币并输入节点所需的所有信息来自行选择成为委托节点的候选人 （当前端口暂时不要改动，代码会使用端口8670，用于P2P通信和消息传递），"pub key"一栏的内容并不是账户的公钥，而是在Docker Container pos目录中public.key里的内容，这个public.key和master.key两个文件是节点运维的公钥和私钥，请将他们备份好。这两个文件是在container启动的时候自动生成的，如果未来升级container，需要用这两个文件覆盖系统自动生成的文件。
+
+候选人设置结束后您可以通过 http://IPaddrOfYourNode:8669/staking/candidates 马上检查自己是否已经变成候选人。
 
 您也可以让其他帐户将他们的MTRG token 投票给您，来增加成为委托节点的机会。变成候选人的交易在系统里会被立即记录并生效，并且节点可以开始接受投票。但是，选票统计会到下一个 k区块才做，您的节点如果到那时候有足够票数，就会成为委托节点。您可以通过 http://IPaddrOfYourNode:8669/staking/delegates 检查委托节点列表，但是这个列表也是要等到当前epoch结束才会根据所有候选人的票数更新。
 
