@@ -1,4 +1,12 @@
 # Warring Stakes Leader Board
+| Git Handle           | Points  |
+|----------------------|---------|
+| bentiancai629        | 900     |
+| mstephen5            | 900     |
+| includeleec          | 900     |
+| xunppchen            | 800     |
+| Hashquark-research   | 700     |
+
 
 # Instructions for Participating in the Meter Test Net
 

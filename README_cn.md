@@ -126,3 +126,28 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 4.成为委员会节点。
 
 因为当前的委员会人数与委托节点数相同。在下一个 Epoch，如果新的委员会产生前，委托节点在线，则委托节点将自动加入委员会。在委员会内部，每个委员会成员将轮流产生 m 区块(普通PoS区块）。我们仍在添加 RPC 接口来显示展示委员会的信息。但是，如果您搜索日志，则会找到“I am in committee”。
+
+
+# 委托节点密钥备份和升级
+
+1. 备份密钥
+```
+sudo docker cp metertest:/pos /home/ubuntu/meter-data
+```
+在meter-data目录里, 您可以发现一个consensus.key文件，这是该节点参与的最后一个epoch中共识的BLS签名密钥，我们建议每次重新启动的时候删除这个文件。主要需要留意的是public.key和master.key文件
+
+2. 停止并删除当前的节点container容器
+```
+sudo docker rm -f metertest
+```
+
+3. 获取最新的Meter Doker容器文件镜像
+```
+sudo docker pull dfinlab/meter-all-in-one:latest
+```
+
+4. 重启Doker容器，并把备份密钥目录映射到Docker容器内的/pos目录 （-v /home/ubuntu/meter-data:/pos）
+```
+sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
+```
+后续升级只需重复2到4步即可

@@ -14,9 +14,9 @@ Phase 2: Community challenge
 
 The initial Warring Stakes test net has 21 committee nodes, to become a committee node, you will have to stake more than 2 MTRG tokens.  
 
-Please try to keep your node up or uncandidate before going offline (if you "uncandidate" and stay till the end of the epoch, one of our nodes should gracefully take over the committee node position) as more than 7 committee nodes failing will break the basic assumption of consensus and stall the test net.  In addition, since all the nodes in the committee will take turns to propose blocks, if you node goes offline, it will cause everyone to slow down and wait for you during your turn.  No points will be given to validator who failed to "uncandidate" before going offline.
+Please try to keep your node up or uncandidate before going offline (if you "uncandidate" and stay till the end of the epoch, one of our nodes should gracefully take over the committee node position) as more than 7 committee nodes failing will break the basic assumption of consensus and stall the test net.  In addition, since all the nodes in the committee will take turns to propose blocks, if you node goes offline, it will cause everyone to slow down and wait for you during your turn.  **No points will be given to validator who failed to "uncandidate" before going offline.**
 
-We are assign points for various activities for example bring up full node and connecting wallet, starting validation, filing bugs and even porting some Ethereum smart contracts.  The participants should file issues in the Github so we could reward you proper points.
+We are assign points for various activities for example bring up full node and connecting wallet, starting validation, filing bugs and even porting some Ethereum smart contracts.  **The participants should file issues in the Github so we could reward you proper points.**
 
 We will tag the issues with different priorities and give different points based on their priorities
 
@@ -33,4 +33,4 @@ Valid P1 BUG: 3000
 
 Special Ecosystem Features: depend on the complexity and how useful are the features
 
-First 5 validators who successfully enter the committee receive and additional 500 points. The bonus points go down by 100 for each additional 5 validators.
+**First 5 validators who successfully enter the committee receive and additional 500 points. The bonus points go down by 100 for each additional 5 validators.**
