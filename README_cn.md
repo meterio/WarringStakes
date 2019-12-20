@@ -1,6 +1,6 @@
-#Meter.io战国争雄测试网参与指南
+# Meter.io战国争雄测试网参与指南
 
-#Meter.io概要
+# Meter.io概要
 
 Meter是具有双链结构的 PoW + PoS 的混合共识链。所有账户信息和交易都记录在PoS链上，而PoW链仅用来进行挖矿产生 Meter 生态的稳定币 MTR。
 
@@ -37,7 +37,7 @@ PoW 链通常需要拥有超过 60 个的区块时，才能创建一个 k 区块
 
 Meter 的 PoW 里的最大区块大小约为1.3MB。Meter 的共识协议以能够在一定程度上根据交易的负荷大小、网络和节点处理速度，在2秒到30秒之间自动调整出块速度。
 
-#配置全节点
+# 配置全节点
 
 当前节点软件是用 docker 镜像来提供的。请参考《 Ubuntu Docker安装指南》。
 
@@ -94,7 +94,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 请联系团队成员以获取MTRG和MTR测试代币。
 
 
-#配置委托节点
+# 配置委托节点
 
 成为委托节点需要抵押 MTRG 。您必须同时拥有 MTR 和 MTRG 才能执行交易。
 
