@@ -1,7 +1,7 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| bentiancai629        | 900     |
+| bentiancai629        |1000     |
 | mstephen5            | 900     |
 | includeleec          | 900     |
 | xunppchen            | 800     |
@@ -32,7 +32,7 @@ To achieve the full performance of the Meter network, the recommended hardware c
 # Setting up a full node
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
-1. Obtain the delegates.json file from the GitHub repo to your home directory (the following instructions assume delegates.json is in /home/ubuntu).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
+1. Obtain the delegates.json file from the GitHub repo to your home directory (**the following instructions assume delegates.json is in /home/ubuntu. Please pay attention to the parameters in the commands and replace the path accordingly to your environment, espeically the path after -v in docker run in step 2**).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
 ```
 git clone https://github.com/meterio/warringstakes
 cp ./warringstakes/delegates.json .
