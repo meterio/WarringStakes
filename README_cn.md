@@ -135,7 +135,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 ```
 sudo docker cp metertest:/pos /home/ubuntu/meter-data
 ```
-在meter-data目录里, 您可以发现一个consensus.key文件，这是该节点参与的最后一个epoch中共识的BLS签名密钥，我们建议每次重新启动的时候删除这个文件。主要需要留意的是public.key和master.key文件
+在meter-data目录里, 您需要留意的是public.key，master.key和delegates.json文件，您可以发现一个consensus.key文件，这是该节点参与的最后一个epoch中共识的BLS签名密钥，我们建议每次重新启动的时候删除这个文件。另外有一些其它的文件和目录，在测试网上也建议重新启动的时候删除，这样可以让节点重新同步区块，保证信息的正确和完整性。
 
 2. 停止并删除当前的节点container容器
 ```
