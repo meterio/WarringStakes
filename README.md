@@ -6,6 +6,8 @@
 | includeleec          | 900     |
 | xunppchen            | 800     |
 | Hashquark-research   | 700     |
+| rewseRE              | 700     |
+| dolphintwo           | 600     |
 
 
 # Instructions for Participating in the Meter Test Net
@@ -106,7 +108,7 @@ If a candidate receives enough votes and ranked in the top N candidate nodes, it
 ```
 sudo docker cp metertest:/pos /home/ubuntu/meter-data
 ```
-If you look into the meter-data directory, there is one file called consensus.key  It is the BLS key for the last epoch when the node was in the committee.  We suggest removing this file each time when you restart the container
+If you look into the meter-data directory, there are three files that are important to keep: delegates.json, master.key and public.key.  There is also file called consensus.key.  It is the BLS key for the last epoch when the node was in the committee.  We suggest removing this file each time when you restart the container.  In addition, there are also several other files and directories in this folder, we suggest you to delete them as well on the testnet.  This will cause the database to resync
 
 2. Stop and delete the current docker container
 ```
