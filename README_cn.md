@@ -101,6 +101,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 1.为您的节点配置网络端口。
 
 如果要成为委托节点并为入站 TCP 连接打开以下端口，建议使用公网 IP 地址端口。
+
 | Port Range           | Functions        |
 |----------------------|------------------|
 | 9209                 | PoW P2P          |
