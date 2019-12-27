@@ -146,6 +146,11 @@ sudo docker rm -f metertest
 ```
 sudo docker pull dfinlab/meter-all-in-one:latest
 ```
+3. 强制重新同步区块，并刷新BLS密钥（强烈建议做这一步）
+```
+sudo rm -rf /home/ubuntu/meter-data/instance-9eeef4f05bf08063
+sudo rm -rf consensus.key
+```
 
 4. 重启Doker容器，并把备份密钥目录映射到Docker容器内的/pos目录 （-v /home/ubuntu/meter-data:/pos）
 ```

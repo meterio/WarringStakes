@@ -1,13 +1,16 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| bentiancai629        |1000     |
+| bentiancai629        | 1000    |
+| dolphintwo           | 1000    |
 | mstephen5            | 900     |
 | includeleec          | 900     |
+| huglester            | 900     |
+| wetezos              | 900     |
 | xunppchen            | 800     |
 | Hashquark-research   | 700     |
 | rewseRE              | 700     |
-| dolphintwo           | 600     |
+| Wendy                | 600     |
 
 
 # Instructions for Participating in the Meter Test Net
@@ -120,9 +123,10 @@ sudo docker rm -f metertest
 sudo docker pull dfinlab/meter-all-in-one:latest
 ```
 
-4. Remove history (Optional)
+4. Force Resync block history and remove unused BLS keys (Recommended)
 ```
-sudo rm /home/ubuntu/meter-data/instance-9eeef4f05bf08063
+sudo rm -rf /home/ubuntu/meter-data/instance-9eeef4f05bf08063
+sudo rm -rf consensus.key
 ```
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
