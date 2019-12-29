@@ -11,6 +11,7 @@
 | Hashquark-research   | 700     |
 | rewseRE              | 700     |
 | Wendy                | 600     |
+| Tomshi               | 600     |
 
 
 # Instructions for Participating in the Meter Test Net
