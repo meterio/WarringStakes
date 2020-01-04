@@ -1,17 +1,18 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| bentiancai629        | 1000    |
-| dolphintwo           | 1000    |
-| mstephen5            | 900     |
-| includeleec          | 900     |
-| huglester            | 900     |
-| wetezos              | 900     |
-| xunppchen            | 800     |
+| dolphintwo           | 1100    |
+| bentiancai629        | 1100    |
+| mstephen5            | 1000    |
+| includeleec          | 1000    |
+| huglester            | 1000    |
+| wetezos              | 1000    |
+| xunppchen            | 900     |
+| rewseRE              | 800     |
+| Tomshi               | 800     |
 | Hashquark-research   | 700     |
-| rewseRE              | 700     |
+| HeyRoseWu            | 700     |
 | Wendy                | 600     |
-| Tomshi               | 600     |
 
 
 # Instructions for Participating in the Meter Test Net
