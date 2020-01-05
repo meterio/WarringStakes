@@ -12,10 +12,11 @@
 | Tomshi               | 800     |
 | Hashquark-research   | 700     |
 | HeyRoseWu            | 700     |
-| Wendy                | 600     |
+| huluyisheng (Wendy)  | 600     |
 
 
 # Instructions for Participating in the Meter Test Net
+If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
 
 # Overview
 Meter is a hybrid PoW and PoS blockchain system with dual chain structure.  All the accounts and transactions are recorded on the PoS chain while PoW chain (currently a modified version of Bitcoin starting from the same genesis of Bitcoin) just maintains the crypto puzzles for mining. The PoW chain submits the solutions for the crypto puzzles to the PoS chain and the winning miners receive reward on their accounts on the PoS chain.  
@@ -82,6 +83,9 @@ After confirming the node is running properly through the log, you could then co
 
 3. Download [Meter desktop wallet](https://meter.io/developers) and connect to your own full node
 In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
+
+![Adding Your Node in Wallet Settings](./addnode.png)
+![Connecting to Your Node](./connectnode.png)
 
 # Become a delegate node
 Becoming a delegate node requires staking MTRG tokens.  You will have to have both MTR and MTRG tokens in order to perform the transaction.

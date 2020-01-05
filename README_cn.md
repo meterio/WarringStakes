@@ -1,4 +1,5 @@
 # Meter.io战国争雄测试网参与指南
+请填写[验证节点申请表](https://metervalidators.typeform.com/to/yVVUDw) 填写表格的时候请准备好Meter钱包地址，和联系方式，我们会给您转测试币。另外节点设置完毕后请在Github的Issue里填写一下节点的信息，我们会根据对应的信息检查和纪录积分。
 
 # Meter.io概要
 
@@ -90,6 +91,9 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 3.下载 Meter 桌面钱包并通过钱包设置连接到您自己的全节点
 
 在钱包中，您可以通过“Settings”添加 http://IPaddrOfYourNode:8669 设置自己的全节点，并在地址栏选择连接自己的全节点。如果一切正常，地址栏左侧的图标应该变为绿色。您可以使用钱包内的浏览器查看生成区块的状态。您还应该创建一个帐户。请确保将助记词保存在安全的位置，当我们在测试网之间切换时，您将需要它们来找回您的帐户，并且它也可以在将来的主网上使用。
+
+![添加全节点](./addnode.png)
+![连接全节点](./connectnode.png)
 
 请联系团队成员以获取MTRG和MTR测试代币。
 
