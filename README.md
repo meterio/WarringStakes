@@ -13,6 +13,8 @@
 | Hashquark-research   | 700     |
 | HeyRoseWu            | 700     |
 | huluyisheng (Wendy)  | 600     |
+| sundafa (Nodeasy)    | 500     |
+| r808-m (pupu)        | 500     |
 
 
 # Instructions for Participating in the Meter Test Net
