@@ -50,6 +50,14 @@ cp ./warringstakes/delegates.json .
 
 该文件包含 <验证创世区块的节点> 以及<备用委托节点（在没有足够的 staking 委托节点的情况下组成委员会>
 
+2. 准备一个本机的工作目录映射给docker容器
+建议吧一个本机的工作目录映射到docker容器里用来存储重要的公钥，私钥和区块数据库。这样可以保证未来的顺利升级，下面的指南假设工作目录是/home/ubuntu/meter-data ，该目录会在容器启动的时候用“-v”命令被映射到容器里的/pos目录
+```
+mkdir meter-data
+cp ./warringstakes/delegates.json /home/ubuntu/meter-data/.
+```
+
+
 2.启动 Meter container
 ```
 sudo docker pull dfinlab/meter-all-in-one; sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
@@ -135,7 +143,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 # 委托节点密钥备份和升级
 
-1. 备份密钥
+1. 备份密钥(如果在启动容器时已经把本机的工作目录映射到容器里，这一步可以跳过)
 ```
 sudo docker cp metertest:/pos /home/ubuntu/meter-data
 ```
@@ -161,3 +169,9 @@ sudo rm -rf consensus.key
 sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
 ```
 后续升级只需重复2到4步即可
+
+# 配置自动升级
+因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，这个容器假设本机的 /home/ubuntu/meter-data 目录已经被映射Meter容器的/pos目录。当检测到新的容器镜像发布的时候会自动下载镜像并升级
+```
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --enable-lifecycle-hooks --interval 10 metertest
+```

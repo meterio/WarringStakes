@@ -42,16 +42,22 @@ To achieve the full performance of the Meter network, the recommended hardware c
 # Setting up a full node
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
-1. Obtain the delegates.json file from the GitHub repo to your home directory (**the following instructions assume delegates.json is in /home/ubuntu. Please pay attention to the parameters in the commands and replace the path accordingly to your environment, espeically the path after -v in docker run in step 2**).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
+1. Obtain the delegates.json file from the GitHub repo to your home directory (**the following instructions assumes the user operates in /home/ubuntu/. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
 ```
 git clone https://github.com/meterio/warringstakes
-cp ./warringstakes/delegates.json .
 ```
 
-2. Launch the Meter container
+2. Prepare host working directory for container
+It is recommended to have a host working directory for the container to save important keys and block database, so we could retain them in future upgrades.  We will create a directory called /home/ubuntu/meter-data (you will have to modify accordingly if you have a different directory structure) and map it to the /pos directory inside the container.
+```
+mkdir meter-data
+cp ./warringstakes/delegates.json /home/ubuntu/meter-data/.
+```
+
+3. Launch the Meter container
 
 ```
-sudo docker pull dfinlab/meter-all-in-one; sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
+sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
 ```
 In the above command DISCO_SERVER points to the discovery server for other peers in the network. POW_LEADER points to node that could provide peer information for the PoW chain.  The two IP addresses should be the same.  The committee and delegate size should be configured properly based on the instructions of the test net.
 It will download the latest container and launch a meter full node
@@ -83,7 +89,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
 
-3. Download [Meter desktop wallet](https://meter.io/developers) and connect to your own full node
+4. Download [Meter desktop wallet](https://meter.io/developers) and connect to your own full node
 In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
 
 ![Adding Your Node in Wallet Settings](./addnode.png)
@@ -115,7 +121,7 @@ If a candidate receives enough votes and ranked in the top N candidate nodes, it
 
 # Update meter docker image without losing any data/configuration
 
-1. Backup meter data/config folder
+1. Backup meter data/config folder (the following command is only needed when you did not map the host /home/ubuntu/meter-data directory when you started the container)
 ```
 sudo docker cp metertest:/pos /home/ubuntu/meter-data
 ```
@@ -142,3 +148,9 @@ sudo rm -rf consensus.key
 sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
 ```
 After step 1 is completed, you will only need to repeat step 2 to 4 each time upgrading the docker image
+
+# Setting up automatic update for Meter Docker images
+We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly. This docker image assumes the meter-data directory under /home/ubuntu/meter-data.
+```
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --enable-lifecycle-hooks --interval 10 metertest
+```
