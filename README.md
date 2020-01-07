@@ -15,6 +15,11 @@
 | huluyisheng (Wendy)  | 600     |
 | sundafa (Nodeasy)    | 500     |
 | r808-m (pupu)        | 500     |
+| vanguard             | 500     |
+| Bit Cat              | 500     |
+| zbx001               | 400     |
+| ercw                 | 400     |
+| easytake             | 400     |
 
 
 # Instructions for Participating in the Meter Test Net
@@ -150,7 +155,7 @@ sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aed
 After step 1 is completed, you will only need to repeat step 2 to 4 each time upgrading the docker image
 
 # Setting up automatic update for Meter Docker images
-We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly. 
+We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
 sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --enable-lifecycle-hooks --interval 10 metertest
 ```
