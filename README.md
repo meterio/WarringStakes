@@ -16,10 +16,14 @@
 | sundafa (Nodeasy)    | 500     |
 | r808-m (pupu)        | 500     |
 | vanguard             | 500     |
-| Bit Cat              | 500     |
-| zbx001               | 400     |
-| ercw                 | 400     |
-| easytake             | 400     |
+| wjdfx(Bit Cat)       | 500     |
+| olbk1915(zbx001)     | 400     |
+| ercwangwh(ercw)      | 400     |
+| usnggogogo(easytake) | 400     |
+| bl-mds(BAM)          | 400     |
+| p2p.org              | 300     |
+| tashalin88(Forward)  | 300     |
+| yasyazb(flybird)     | 300     |
 
 
 # Instructions for Participating in the Meter Test Net
