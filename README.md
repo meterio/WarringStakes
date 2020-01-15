@@ -1,19 +1,19 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| dolphintwo           | 1100    |
-| bentiancai629        | 1100    |
+| dolphintwo           | 1200    |
+| bentiancai629        | 1200    |
+| includeleec          | 1100    |
+| huglester            | 1100    |
+| wetezos              | 1100    |
 | mstephen5            | 1000    |
-| includeleec          | 1000    |
-| huglester            | 1000    |
-| wetezos              | 1000    |
-| xunppchen            | 900     |
-| rewseRE              | 800     |
-| Tomshi               | 800     |
-| Hashquark-research   | 700     |
-| HeyRoseWu            | 700     |
-| huluyisheng (Wendy)  | 600     |
-| sundafa (Nodeasy)    | 500     |
+| xunppchen            | 1000    |
+| rewseRE              | 900     |
+| Tomshi               | 900     |
+| Hashquark-research   | 800     |
+| HeyRoseWu            | 800     |
+| huluyisheng (Wendy)  | 700     |
+| sundafa (Nodeasy)    | 600     |
 | r808-m (pupu)        | 500     |
 | vanguard             | 500     |
 | wjdfx(Bit Cat)       | 500     |
@@ -24,7 +24,7 @@
 | p2p.org              | 300     |
 | tashalin88(Forward)  | 300     |
 | yasyazb(flybird)     | 300     |
-
+| Anthonyhuanggr       | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
