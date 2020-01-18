@@ -1,30 +1,31 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| dolphintwo           | 1200    |
-| bentiancai629        | 1200    |
-| includeleec          | 1100    |
-| huglester            | 1100    |
-| wetezos              | 1100    |
+| dolphintwo           | 1300    |
+| bentiancai629        | 1300    |
+| includeleec          | 1200    |
+| huglester            | 1200    |
+| wetezos              | 1200    |
 | mstephen5            | 1000    |
-| xunppchen            | 1000    |
-| rewseRE              | 900     |
-| Tomshi               | 900     |
-| Hashquark-research   | 800     |
-| HeyRoseWu            | 800     |
-| huluyisheng (Wendy)  | 700     |
-| sundafa (Nodeasy)    | 600     |
+| xunppchen (kiwi)     | 1100    |
+| rewseRE(noderunners) | 1000    |
+| Tomshi               | 1000    |
+| Hashquark-research   | 900     |
+| HeyRoseWu            | 900     |
+| huluyisheng (Wendy)  | 800     |
+| sundafa (Nodeasy)    | 700     |
+| olbk1915(zbx001)     | 600     |
 | r808-m (pupu)        | 500     |
 | vanguard             | 500     |
 | wjdfx(Bit Cat)       | 500     |
-| olbk1915(zbx001)     | 400     |
+| usnggogogo(easytake) | 500     |
+| bl-mds(BAM)          | 500     |
 | ercwangwh(ercw)      | 400     |
-| usnggogogo(easytake) | 400     |
-| bl-mds(BAM)          | 400     |
-| p2p.org              | 300     |
-| tashalin88(Forward)  | 300     |
-| yasyazb(flybird)     | 300     |
-| Anthonyhuanggr       | 300     |
+| p2p.org              | 400     |
+| tashalin88(Forward)  | 400     |
+| yasyazb(flybird)     | 400     |
+| Anthonyhuanggr       | 400     |
+| DokiaCapital         | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
