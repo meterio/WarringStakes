@@ -26,6 +26,7 @@
 | yasyazb(flybird)     | 400     |
 | Anthonyhuanggr       | 400     |
 | DokiaCapital         | 300     |
+| Inotel               | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
@@ -47,7 +48,7 @@ In the test net and initial launch of the main net.  The number of Delegate Node
 
 
 Requirements for running a delegate/committee node:
-To achieve the full performance of the Meter network, the recommended hardware configuration is more than 8 compute optimized vCPU, 16GB of memory and 100GB of SSD (AWS c5.2xlarge instance or better).  The maximum block size in Meter is around 1.3MB. It is also recommended to have data center class 1Gbps to 10Gbps internet connection.  However the Meter consensus protocol is capable of adapting to transaction load, network and node processing speed to some extent by varying the block period from 2 sec to up to 30 sec.  The minimum requirement is 2 vCPU and 4GB of memory.  
+To achieve the full performance of the Meter network, the recommended hardware configuration is more than 8 compute optimized vCPU, 16GB of memory and 100GB of SSD (AWS c5.2xlarge instance or better).  The maximum block size in Meter is around 1.3MB. It is also recommended to have data center class 1Gbps to 10Gbps internet connection.  However the Meter consensus protocol is capable of adapting to transaction load, network and node processing speed to some extent by varying the block period from 2 sec to up to 30 sec.  The minimum requirement is 2 vCPU and 4GB of memory. When the network has minimum load, the average monthly block data is expected to be about 1.5GB.   
 
 # Setting up a full node
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
