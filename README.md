@@ -76,7 +76,7 @@ It will download the latest container and launch a meter full node
 Several useful commands for docker:
 
 ```
-sudo docker container ls -l
+sudo docker container ls -a
 
 ```
 The output will be like the following:

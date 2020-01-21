@@ -71,7 +71,7 @@ DISCO_SERVER PoS网络中发现其他节点的服务器。 POW_LEADER 指向可�
 对Docker有用的一些命令：
 
 ```
-sudo docker container ls -l
+sudo docker container ls -a
 
 ```
 
