@@ -171,7 +171,7 @@ sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aed
 后续升级只需重复2到4步即可
 
 # 配置自动升级
-因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，当检测到新的容器镜像发布的时候会自动下载镜像并升级
+因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，当检测到新的容器镜像发布的时候会自动下载镜像并升级(请注意命令行里metertest的名字，如果之前启动meter容器的时候用的其它名字ke)
 ```
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --enable-lifecycle-hooks --interval 10 metertest
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 metertest
 ```
