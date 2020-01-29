@@ -1,32 +1,33 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| dolphintwo           | 1300    |
-| bentiancai629        | 1300    |
-| includeleec          | 1200    |
-| huglester            | 1200    |
-| wetezos              | 1200    |
+| dolphintwo           | 1400    |
+| bentiancai629        | 1400    |
+| includeleec          | 1300    |
+| huglester            | 1300    |
+| wetezos              | 1300    |
 | mstephen5            | 1000    |
-| xunppchen (kiwi)     | 1100    |
-| rewseRE(noderunners) | 1000    |
-| Tomshi               | 1000    |
-| Hashquark-research   | 900     |
-| HeyRoseWu            | 900     |
-| huluyisheng (Wendy)  | 800     |
-| sundafa (Nodeasy)    | 700     |
-| olbk1915(zbx001)     | 600     |
-| r808-m (pupu)        | 500     |
+| xunppchen (kiwi)     | 1200    |
+| rewseRE(noderunners) | 1100    |
+| Tomshi               | 1100    |
+| Hashquark-research   | 1000    |
+| HeyRoseWu            | 1000    |
+| huluyisheng (Wendy)  | 900     |
+| sundafa (Nodeasy)    | 800     |
+| olbk1915(zbx001)     | 700     |
+| r808-m (pupu)        | 600     |
+| usnggogogo(easytake) | 600     |
+| bl-mds(BAM)          | 600     |
 | vanguard             | 500     |
 | wjdfx(Bit Cat)       | 500     |
-| usnggogogo(easytake) | 500     |
-| bl-mds(BAM)          | 500     |
+| p2p.org              | 500     |
+| yasyazb(flybird)     | 500     |
+| Anthonyhuanggr       | 500     |
 | ercwangwh(ercw)      | 400     |
-| p2p.org              | 400     |
 | tashalin88(Forward)  | 400     |
-| yasyazb(flybird)     | 400     |
-| Anthonyhuanggr       | 400     |
-| DokiaCapital         | 300     |
-| Inotel               | 300     |
+| DokiaCapital         | 400     |
+| Inotel               | 400     |
+| Blockventure         | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
@@ -161,7 +162,7 @@ sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aed
 After step 1 is completed, you will only need to repeat step 2 to 4 each time upgrading the docker image
 
 # Setting up automatic update for Meter Docker images
-We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
+We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly (please pay attention to the name "metertest" in the command and change it accordingly if you used a different name for the meter container).
 ```
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --enable-lifecycle-hooks --interval 10 metertest
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 metertest
 ```
