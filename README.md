@@ -13,11 +13,11 @@
 | HeyRoseWu            | 1100    |
 | huluyisheng (Wendy)  | 1000    |
 | mstephen5            | 1000    |
+| bl-mds(BAM)          | 1000    |
 | sundafa (Nodeasy)    | 800     |
 | olbk1915(zbx001)     | 800     |
 | r808-m (pupu)        | 700     |
 | usnggogogo(easytake) | 700     |
-| bl-mds(BAM)          | 700     |
 | vanguard             | 600     |
 | p2p.org              | 600     |
 | wjdfx(Bit Cat)       | 500     |
