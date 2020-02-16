@@ -1,36 +1,36 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 1600    |
-| dolphintwo           | 1500    |
-| bentiancai629        | 1500    |
-| includeleec          | 1400    |
-| wetezos              | 1400    |
-| xunppchen (kiwi)     | 1300    |
-| rewseRE(noderunners) | 1200    |
-| Tomshi               | 1200    |
-| Hashquark-research   | 1100    |
-| HeyRoseWu            | 1100    |
-| huluyisheng (Wendy)  | 1000    |
+| huglester            | 1900    |
+| dolphintwo           | 1600    |
+| bentiancai629        | 1600    |
+| includeleec          | 1500    |
+| wetezos              | 1500    |
+| xunppchen (kiwi)     | 1400    |
+| rewseRE(noderunners) | 1300    |
+| Tomshi               | 1300    |
+| Hashquark-research   | 1200    |
+| HeyRoseWu            | 1200    |
+| huluyisheng (Wendy)  | 1100    |
 | mstephen5            | 1000    |
-| bl-mds(BAM)          | 1000    |
+| bl-mds(BAM)          | 1100    |
 | sundafa (Nodeasy)    | 800     |
-| olbk1915(zbx001)     | 800     |
-| r808-m (pupu)        | 700     |
-| usnggogogo(easytake) | 700     |
-| vanguard             | 600     |
-| p2p.org              | 600     |
+| olbk1915(zbx001)     | 900     |
+| r808-m (pupu)        | 800     |
+| usnggogogo(easystake)| 800     |
+| vanguard             | 700     |
+| p2p.org              | 700     |
 | wjdfx(Bit Cat)       | 500     |
-| yasyazb(flybird)     | 600     |
-| Anthonyhuanggr       | 600     |
+| yasyazb(flybird)     | 700     |
+| Anthonyhuanggr       | 700     |
 | ercwangwh(ercw)      | 400     |
 | tashalin88(Forward)  | 500     |
-| DokiaCapital         | 500     |
-| Inotel               | 500     |
+| DokiaCapital         | 600     |
+| Inotel               | 600     |
 | AliceNode            | 200     |
-| TRIXvalidator        | 200     |
-| sll325               | 200     |
-| isillien             | 200     |
+| TRIXvalidator        | 300     |
+| sll325               | 300     |
+| isillien             | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
