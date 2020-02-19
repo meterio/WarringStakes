@@ -31,6 +31,7 @@
 | TRIXvalidator        | 300     |
 | sll325               | 300     |
 | isillien             | 300     |
+| blockventure         | 300     |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
@@ -115,18 +116,18 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 
 1. Configure network ports for your node.  It is recommended to have a public IP address if you want to become a delegate node and have the following ports open for inbound TCP connections
 
-| Port Range           | Functions        |
-|----------------------|------------------|
-| 9209                 | PoW P2P          |
-| 8332                 | PoW API          |
-| 8669                 | Wallet REST API  |
-| 8670-8671            | PoW/PoS Messages |
-| 55555                | Discovery Server |
-| 11235                | PoS P2P          |
-| 9100                 | node explorers   |
+| Port Range           | Functions                  |
+|----------------------|----------------------------|
+| 9209                 | PoW P2P (required)         |
+| 8332                 | PoW API                    |
+| 8669                 | Wallet REST API            |
+| 8670-8671            | PoW/PoS Messages (required)|
+| 55555                | Discovery Server           |
+| 11235                | PoS P2P (required)         |
+| 9100                 | node explorers             |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidate" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node (currently the port configuration is not used, the code will always port 8670 for P2P communications and messaging).  When filling in the "Candidate" tab, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates  
+In the desktop wallet, under the "Candidate" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" tab, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates  
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
