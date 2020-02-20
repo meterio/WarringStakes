@@ -114,15 +114,15 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 如果要成为委托节点并为入站 TCP 连接打开以下端口，建议使用公网 IP 地址端口。
 
-| Port Range           | Functions        |
-|----------------------|------------------|
-| 9209                 | PoW P2P          |
-| 8332                 | PoW API          |
-| 8669                 | Wallet REST API  |
-| 8670-8671            | PoW/PoS Messages |
-| 55555                | Discovery Server |
-| 11235                | PoS P2P          |
-| 9100                 | node explorers   |
+| Port Range           | Functions                  |
+|----------------------|----------------------------|
+| 9209                 | PoW P2P (required)         |
+| 8332                 | PoW API                    |
+| 8669                 | Wallet REST API            |
+| 8670-8671            | PoW/PoS Messages (required)|
+| 55555                | Discovery Server           |
+| 11235                | PoS P2P (required)         |
+| 9100                 | node explorers             |
 
 2.通过桌面钱包成为委托节点的候选人。
 

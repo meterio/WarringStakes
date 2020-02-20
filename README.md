@@ -127,13 +127,14 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 | 9100                 | node explorers             |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidate" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" tab, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates  
+In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
+Your node will automatically pick up by our [testnet monitor page](http://monitor.warringstakes.meter.io/d/SmVLEYaZz/node-dashboard?orgId=1&refresh=1s) once you successfully become a candidate.  
+
 3. Become a delegate node
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/staking/delegates
-
 
 # Update meter docker image without losing any data/configuration
 
