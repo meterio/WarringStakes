@@ -34,6 +34,7 @@
 | seqs                 | 200     |
 | wukong               | 200     |
 | erknfe               | 200     |
+| Kunkomu              | 200     |
 | AliceNode            | 200     |
 
 # Instructions for Participating in the Meter Test Net
