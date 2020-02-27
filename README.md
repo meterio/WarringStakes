@@ -25,7 +25,7 @@
 | DokiaCapital         | 700     |
 | Inotel               | 700     |
 | wjdfx(Bit Cat)       | 600     |
-| ercwangwh(ercw)      | 500     |
+| ercwangwh(ercw)      | 600     |
 | tashalin88(Forward)  | 500     |
 | TRIXvalidator        | 400     |
 | sll325               | 400     |
