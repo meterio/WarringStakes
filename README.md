@@ -12,8 +12,8 @@
 | Hashquark-research   | 1300    |
 | HeyRoseWu            | 1300    |
 | huluyisheng (Wendy)  | 1200    |
-| mstephen5            | 1000    |
 | bl-mds(BAM)          | 1200    |
+| mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1000    |
 | sundafa (Nodeasy)    | 900     |
 | r808-m (pupu)        | 900     |
