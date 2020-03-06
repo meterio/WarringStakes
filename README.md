@@ -1,40 +1,43 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 2100    |
-| dolphintwo           | 1700    |
-| bentiancai629        | 1700    |
+| huglester            | 2400    |
+| dolphintwo           | 1800    |
+| bentiancai629        | 1800    |
 | includeleec          | 1600    |
-| wetezos              | 1600    |
-| xunppchen (kiwi)     | 1500    |
-| Tomshi               | 1500    |
-| rewseRE(noderunners) | 1400    |
-| Hashquark-research   | 1300    |
-| HeyRoseWu            | 1300    |
-| huluyisheng (Wendy)  | 1200    |
-| bl-mds(BAM)          | 1200    |
+| wetezos              | 1700    |
+| Tomshi               | 1700    |
+| xunppchen (kiwi)     | 1600    |
+| rewseRE(noderunners) | 1500    |
+| Hashquark-research   | 1400    |
+| HeyRoseWu            | 1400    |
+| huluyisheng (Wendy)  | 1300    |
+| bl-mds(BAM)          | 1400    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1000    |
-| sundafa (Nodeasy)    | 900     |
+| sundafa (Nodeasy)    | 1000    |
 | r808-m (pupu)        | 900     |
-| usnggogogo(easystake)| 900     |
-| vanguard             | 800     |
-| p2p.org              | 800     |
-| yasyazb(flybird)     | 800     |
-| Anthonyhuanggr       | 800     |
-| DokiaCapital         | 700     |
-| Inotel               | 700     |
-| wjdfx(Bit Cat)       | 600     |
-| ercwangwh(ercw)      | 600     |
+| usnggogogo(easystake)| 1000    |
+| vanguard             | 900     |
+| p2p.org              | 900     |
+| yasyazb(flybird)     | 900     |
+| Anthonyhuanggr       | 1000    |
+| DokiaCapital         | 800     |
+| Inotel               | 800     |
+| wjdfx(Bit Cat)       | 700     |
+| ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 400     |
-| sll325               | 400     |
-| isillien             | 400     |
+| TRIXvalidator        | 500     |
+| sll325               | 500     |
+| isillien             | 500     |
 | blockventure         | 400     |
-| seqs                 | 200     |
-| wukong               | 200     |
-| erknfe               | 200     |
-| Kunkomu              | 200     |
+| seqs                 | 300     |
+| wukong               | 300     |
+| erknfe               | 300     |
+| Kunkomu              | 300     |
+| Freestealer          | 200     |
+| FreshMeters          | 200     |
+| zhongbensuan         | 200     |
 | AliceNode            | 200     |
 
 # Instructions for Participating in the Meter Test Net
