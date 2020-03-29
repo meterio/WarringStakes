@@ -1,44 +1,49 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 2700    |
-| dolphintwo           | 1900    |
-| bentiancai629        | 1900    |
+| huglester            | 3000    |
+| dolphintwo           | 2000    |
+| bentiancai629        | 2000    |
 | includeleec          | 1600    |
-| wetezos              | 1700    |
-| Tomshi               | 1800    |
-| xunppchen (kiwi)     | 1700    |
+| wetezos              | 1800    |
+| Tomshi               | 1900    |
+| xunppchen (kiwi)     | 1800    |
 | rewseRE(noderunners) | 1600    |
 | Hashquark-research   | 1500    |
-| HeyRoseWu            | 1500    |
-| huluyisheng (Wendy)  | 1400    |
-| bl-mds(BAM)          | 1500    |
+| HeyRoseWu            | 1600    |
+| huluyisheng (Wendy)  | 1500    |
+| bl-mds(BAM)          | 1600    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1100    |
-| r808-m (pupu)        | 1000    |
+| sundafa (Nodeasy)    | 1200    |
+| r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
-| vanguard             | 1000    |
-| p2p.org              | 1000    |
+| vanguard             | 1100    |
+| p2p.org              | 1100    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 1020    |
-| DokiaCapital         | 900     |
-| Inotel               | 900     |
-| wjdfx(Bit Cat)       | 800     |
+| Anthonyhuanggr       | 1200    |
+| DokiaCapital         | 1000    |
+| Inotel               | 1000    |
+| wjdfx(Bit Cat)       | 900     |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 600     |
-| sll325               | 600     |
-| isillien             | 600     |
-| blockventure         | 400     |
-| seqs                 | 400     |
-| wukong               | 300     |
-| erknfe               | 400     |
-| Kunkomu              | 400     |
+| TRIXvalidator        | 700     |
+| sll325               | 700     |
+| isillien             | 700     |
+| blockventure         | 500     |
+| seqs                 | 500     |
+| wukong               | 400     |
+| erknfe               | 500     |
+| Kunkomu              | 500     |
 | Freestealer          | 200     |
-| FreshMeters          | 300     |
+| FreshMeters          | 400     |
 | zhongbensuan         | 300     |
 | AliceNode            | 200     |
+| htabs                | 200     |
+| matrixyz             | 200     |
+| nutkab               | 200     |
+| Blue                 | 200     |
+| Bruce                | 200     |
 
 Social Contributions
 | Guilhem              |  50     |
