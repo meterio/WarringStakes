@@ -93,6 +93,7 @@ sudo apt install npm
 sudo apt install nodejs
 sudo apt install redis
 ```
+**Redis安装问题** 安装redis时经常会出现问题，很多情况是因为redis默认配置中启用了IPv6，然而很多操作系统目前还不支持，所以需要手工修改一下redis配置，一般位于 `/etc/redis/redis.conf`，将其中的 `bind 127.0.0.1 ::1` 改为 `bind 127.0.0.1` 然后重新安装即可
 
 **重要提示！** 安全运行 nomp 的一项重要配置是保证数据库的安全，禁止从外部直接访问nomp的数据库Redis，一种简单方法是：
 
