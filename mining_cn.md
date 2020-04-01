@@ -84,7 +84,7 @@ stratum+tcp://矿池IP:3256
 
 以下是 Node.js 和 Redis的最低版本要求，如果使用比以下版本更旧的版本，有可能会出现一些问题：
 
-* [Node.js](http://nodejs.org/) v7.6+ ([英文安装指南](https://tecadmin.net/install-nodejs-with-nvm/#))
+* [Node.js](http://nodejs.org/) v8.x 或 v10.x ([英文安装指南](https://tecadmin.net/install-nodejs-with-nvm/#)，注意不要使用v12，因为项目中的bignum库目前存在兼容问题，详见 [这里](https://github.com/zone117x/node-open-mining-portal/issues/630))
 * [Redis](http://redis.io/) v2.6+ ([英文安装指南](http://redis.io/topics/quickstart))
 
 在Ubuntu Linux中，您可以用下面的命令来安装 nodejs 和 Redis：
