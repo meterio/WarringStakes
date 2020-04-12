@@ -84,7 +84,7 @@ stratum+tcp://矿池IP:3256
 
 以下是 Node.js 和 Redis的最低版本要求，如果使用比以下版本更旧的版本，有可能会出现一些问题：
 
-* [Node.js](http://nodejs.org/) v0.10+ ([英文安装指南](https://tecadmin.net/install-nodejs-with-nvm/#))
+* [Node.js](http://nodejs.org/) v8.x 或 v10.x ([英文安装指南](https://tecadmin.net/install-nodejs-with-nvm/#)，注意不要使用v12，因为项目中的bignum库目前存在兼容问题，详见 [这里](https://github.com/zone117x/node-open-mining-portal/issues/630))
 * [Redis](http://redis.io/) v2.6+ ([英文安装指南](http://redis.io/topics/quickstart))
 
 在Ubuntu Linux中，您可以用下面的命令来安装 nodejs 和 Redis：
@@ -93,6 +93,7 @@ sudo apt install npm
 sudo apt install nodejs
 sudo apt install redis
 ```
+**Redis安装问题** 安装redis时经常会出现问题，很多情况是因为redis默认配置中启用了IPv6，然而很多操作系统目前还不支持，所以需要手工修改一下redis配置，一般位于 `/etc/redis/redis.conf`，将其中的 `bind 127.0.0.1 ::1` 改为 `bind 127.0.0.1` 然后重新安装即可
 
 **重要提示！** 安全运行 nomp 的一项重要配置是保证数据库的安全，禁止从外部直接访问nomp的数据库Redis，一种简单方法是：
 
