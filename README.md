@@ -1,51 +1,58 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 3000    |
+| huglester            | 3300    |
 | dolphintwo           | 2000    |
 | bentiancai629        | 2000    |
 | includeleec          | 1600    |
-| wetezos              | 1800    |
-| Tomshi               | 1900    |
-| xunppchen (kiwi)     | 1800    |
-| rewseRE(noderunners) | 1600    |
+| wetezos              | 1900    |
+| Tomshi               | 2000    |
+| xunppchen (kiwi)     | 1900    |
+| rewseRE(noderunners) | 1700    |
 | Hashquark-research   | 1500    |
 | HeyRoseWu            | 1600    |
 | huluyisheng (Wendy)  | 1500    |
-| bl-mds(BAM)          | 1600    |
+| bl-mds(BAM)          | 1900    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1200    |
+| sundafa (Nodeasy)    | 1300    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
-| vanguard             | 1100    |
-| p2p.org              | 1100    |
+| vanguard             | 1200    |
+| p2p.org              | 1200    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 1200    |
-| DokiaCapital         | 1000    |
-| Inotel               | 1000    |
-| wjdfx(Bit Cat)       | 900     |
+| Anthonyhuanggr       | 1500    |
+| DokiaCapital         | 1100    |
+| Inotel               | 1100    |
+| wjdfx(Bit Cat)       | 1000    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 700     |
-| sll325               | 700     |
-| isillien             | 700     |
-| blockventure         | 500     |
-| seqs                 | 500     |
-| wukong               | 400     |
-| erknfe               | 500     |
-| Kunkomu              | 500     |
+| TRIXvalidator        | 800     |
+| sll325               | 800     |
+| isillien             | 900     |
+| blockventure         | 600     |
+| seqs                 | 600     |
+| wukong               | 500     |
+| erknfe               | 600     |
+| Kunkomu              | 600     |
 | Freestealer          | 200     |
-| FreshMeters          | 400     |
+| FreshMeters          | 500     |
 | zhongbensuan         | 300     |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 200     |
-| nutkab               | 200     |
-| Blue                 | 200     |
-| Bruce                | 200     |
+| matrixyz             | 300     |
+| nutkab               | 350     |
+| Blue                 | 350     |
+| Bruce                | 300     |
+| ZavZav               | 200     |
+| Mars                 | 200     |
+| Wangq                | 200     |
+| zwchero              | 200     |
+| francz               | 200     |
 
 Social Contributions
+| ID                   | Points  |
+|----------------------|---------|
 | Guilhem              |  50     |
 | Griya                |  50     |
 | POTsele              |  50     |
@@ -53,6 +60,13 @@ Social Contributions
 | Muhamad Erfan        |  160    |
 | 黄国荣                |  40     |
 | 林中白书              |  20     |
+| Craig                |  100    |
+| Ivy                  |  500    |
+
+Developer Contributions
+| ID                   | Points  |
+|----------------------|---------|
+| Skeyili1Liaaeeeyyr   |  500    |
 
 # Instructions for Participating in the Meter Test Net
 If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
