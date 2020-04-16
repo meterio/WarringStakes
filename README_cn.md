@@ -42,31 +42,26 @@ Meter 的 PoW 里的最大区块大小约为1.3MB。Meter 的共识协议以能�
 
 当前节点软件是用 docker 镜像来提供的。请参考《 Ubuntu Docker安装指南》。
 
-1.从 GitHub 库中获取 <delegates.json>文件到您的主目录（以下说明假定delegates.json位于/home/ubuntu目录）。
-```
-git clone https://github.com/meterio/warringstakes
-cp ./warringstakes/delegates.json .
-```
-
-该文件包含 <验证创世区块的节点> 以及<备用委托节点（在没有足够的 staking 委托节点的情况下组成委员会>
+1. 下载最新的Meter[桌面版钱包](https://meter.io/developers) 注意在钱包里选择warringstakes测试网，缺省是PoW挖矿测试网。
 
 2. 准备一个本机的工作目录映射给docker容器
-建议吧一个本机的工作目录映射到docker容器里用来存储重要的公钥，私钥和区块数据库。这样可以保证未来的顺利升级，下面的指南假设工作目录是/home/ubuntu/meter-data ，该目录会在容器启动的时候用“-v”命令被映射到容器里的/pos目录
+建议把一个本机的工作目录映射到docker容器里用来存储重要的公钥，私钥和区块数据库。这样可以保证未来的顺利升级，下面的指南假设工作目录是/home/ubuntu/meter-data ，该目录会在容器启动的时候用“-v”命令被映射到容器里的/pos目录
+
+如果您以前运行过Meter的节点，请务必先删除之前的工作目录和docker容器，可以参考下面的命令
+```
+sudo rm -rf meter-data
+sudo docker container rm -f meter-test
+sudo docker container rm -f watchtower
+```
+准备一个干净的工作目录
 ```
 mkdir meter-data
-cp ./warringstakes/delegates.json /home/ubuntu/meter-data/.
 ```
 
-
-2.启动 Meter container
+2.启动 Meter 容器
 ```
-sudo docker pull dfinlab/meter-all-in-one; sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/delegates.json:/pos/delegates.json --network host --name metertest -d dfinlab/meter-all-in-one:latest
+sudo docker pull dfinlab/meter-allin:latest;sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
-在上面的命令中：
-
-DISCO_SERVER PoS网络中发现其他节点的服务器。 POW_LEADER 指向可以为PoW 链提供节点信息的服务器。这两个IP地址应该相同。
-
-委员会和委托节点数量应该根据测试网的说明进行适当配置。它将下载最新的container并启动 Meter 全节点。
 
 对Docker有用的一些命令：
 
@@ -79,19 +74,19 @@ sudo docker container ls -a
 
 ```
 CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS               NAMES
-260bbd571d1a        dfinlab/meter-all-in-one   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             metertest
+260bbd571d1a        dfinlab/meter-allin   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             meter
 ```
 ```
-sudo docker container stop metertest              //stop the container
-sudo docker container start metertest             //start the container
-sudo docker container rm metertest                //remove the container
+sudo docker container stop meter              //stop the container
+sudo docker container start meter             //start the container
+sudo docker container rm meter                //remove the container
 sudo docker image ls
 sudo docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
-sudo docker container exec -it metertest bash     //launch a bash in the container
+sudo docker container exec -it meter bash     //launch a bash in the container
 ```
 日志文件可以在 container 的/var/log/supervisor 目录下找到。如果您发现了任何错误，请记得在Github的Issue中附加PoS日志（stderr和stdout）。下面命令可以把Docker Container里的日志文件拷贝的宿主机的当前目录：
 ```
-sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
+sudo docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
 ```
 
 在通过日志确认节点正常运行之后，您可以将桌面钱包连接到您自己的完整节点。
@@ -126,7 +121,7 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 2.通过桌面钱包成为委托节点的候选人。
 
-在桌面钱包的"Candidate"选项下，您可以通过质押至少 2个MTRG 代币并输入节点所需的所有信息来自行选择成为委托节点的候选人 （当前端口暂时不要改动，代码会使用端口8670，用于P2P通信和消息传递），"pub key"一栏的内容并不是账户的公钥，而是在Docker Container pos目录中public.key里的内容，这个public.key和master.key两个文件是节点运维的公钥和私钥，请将他们备份好。这两个文件是在container启动的时候自动生成的，如果未来升级container，需要用这两个文件覆盖系统自动生成的文件。
+在桌面钱包的"Candidate"选项下，您可以通过质押至少 300个MTRG 代币并输入节点所需的所有信息来自行选择成为委托节点的候选人 （当前端口暂时不要改动，代码会使用端口8670，用于P2P通信和消息传递），"pub key"一栏的内容并不是账户的公钥，而是在Docker Container pos目录中public.key里的内容，这个public.key和master.key两个文件是节点运维的公钥和私钥，请将他们备份好。这两个文件是在container启动的时候自动生成的，如果未来升级container，需要用这两个文件覆盖系统自动生成的文件。
 
 候选人设置结束后您可以通过 http://IPaddrOfYourNode:8669/staking/candidates 马上检查自己是否已经变成候选人。
 
@@ -143,35 +138,33 @@ sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace wit
 
 # 委托节点密钥备份和升级
 
-1. 备份密钥(如果在启动容器时已经把本机的工作目录映射到容器里，这一步可以跳过)
-```
-sudo docker cp metertest:/pos /home/ubuntu/meter-data
-```
-在meter-data目录里, 您需要留意的是public.key，master.key和delegates.json文件，您可以发现一个consensus.key文件，这是该节点参与的最后一个epoch中共识的BLS签名密钥，我们建议每次重新启动的时候删除这个文件。另外有一些其它的文件和目录，在测试网上也建议重新启动的时候删除，这样可以让节点重新同步区块，保证信息的正确和完整性。
+1. 备份BLS密钥
+在meter-data目录里, 您需要留意的是public.key，master.key和delegates.json文件.另外有一些其它的文件和目录，在测试网上也建议重新启动的时候删除，这样可以让节点重新同步区块，保证信息的正确和完整性。
 
-2. 停止并删除当前的节点container容器
+因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，当检测到新的容器镜像发布的时候会自动下载镜像并升级(请注意命令行里meter的名字，如果之前启动meter容器的时候用的其它名字)
 ```
-sudo docker rm -f metertest
+sudo docker pull dfinlab/watchtower:latest;
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
 ```
 
-3. 获取最新的Meter Doker容器文件镜像
+如果是手工升级，可以采用下面的步骤：
+
+1. 停止并删除当前的节点container容器
 ```
-sudo docker pull dfinlab/meter-all-in-one:latest
+sudo docker rm -f meter
 ```
-3. 强制重新同步区块，并刷新BLS密钥（强烈建议做这一步）
+
+2. 获取最新的Meter Doker容器文件镜像
+```
+sudo docker pull dfinlab/meter-allin:latest
+```
+
+3. 强制重新同步区块（强烈建议做这一步）
 ```
 sudo rm -rf /home/ubuntu/meter-data/instance-9eeef4f05bf08063
-sudo rm -rf consensus.key
 ```
 
 4. 重启Doker容器，并把备份密钥目录映射到Docker容器内的/pos目录 （-v /home/ubuntu/meter-data:/pos）
 ```
-sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
-```
-后续升级只需重复2到4步即可
-
-# 配置自动升级
-因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，当检测到新的容器镜像发布的时候会自动下载镜像并升级(请注意命令行里metertest的名字，如果之前启动meter容器的时候用的其它名字ke)
-```
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 metertest
+sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```

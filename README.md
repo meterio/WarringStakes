@@ -93,25 +93,29 @@ To achieve the full performance of the Meter network, the recommended hardware c
 # Setting up a full node
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
-1. Obtain the delegates.json file from the GitHub repo to your home directory (**the following instructions assumes the user operates in /home/ubuntu/. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  This file contains the nodes that validate the genesis blocks and also serves as backup delegate nodes to run the committee in case there is not enough staked delegate nodes to form the committee.
-```
-git clone https://github.com/meterio/warringstakes
-```
+1. Download the latest [desktop wallet](https://meter.io/developers) and make sure you select the warringstakes tesnet.  
 
-2. Prepare host working directory for container
+2. Prepare host working directory for Meter Docker container
 It is recommended to have a host working directory for the container to save important keys and block database, so we could retain them in future upgrades.  We will create a directory called /home/ubuntu/meter-data (you will have to modify accordingly if you have a different directory structure) and map it to the /pos directory inside the container.
+
+(**the following instructions assumes the user operates in /home/ubuntu/. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  
+
+If your node has run Meter in the past, please make sure to clean the working directory and remove the container with the following commands.
+```
+sudo rm -rf meter-data
+sudo docker container rm -f meter-test
+sudo docker container rm -f watchtower
+```
+Prepare a clean working directory
 ```
 mkdir meter-data
-cp ./warringstakes/delegates.json /home/ubuntu/meter-data/.
 ```
 
 3. Launch the Meter container
 
 ```
-sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
+sudo docker pull dfinlab/meter-allin:latest;sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
-In the above command DISCO_SERVER points to the discovery server for other peers in the network. POW_LEADER points to node that could provide peer information for the PoW chain.  The two IP addresses should be the same.  The committee and delegate size should be configured properly based on the instructions of the test net.
-It will download the latest container and launch a meter full node
 
 Several useful commands for docker:
 
@@ -122,25 +126,25 @@ sudo docker container ls -a
 The output will be like the following:
 ```
 CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS               NAMES
-260bbd571d1a        dfinlab/meter-all-in-one   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             metertest
+260bbd571d1a        dfinlab/meter-allin   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             meter
 ```
 ```
-sudo docker container stop metertest              //stop the container
-sudo docker container start metertest             //start the container
-sudo docker container rm metertest                //remove the container
+sudo docker container stop meter              //stop the container
+sudo docker container start meter             //start the container
+sudo docker container rm meter                //remove the container
 sudo docker image ls
 sudo docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
-sudo docker container exec -it metertest bash     //launch a bash in the container
+sudo docker container exec -it meter bash     //launch a bash in the container
 ```
 
 The log files can be located inside the container, under /var/log/supervisor directory.  If you file any bugs, please remember to attach the logs for PoS (both the stderr and stdout) in the bug. You could either copy and paste the log or use
 ```
-sudo docker cp metertest:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
+sudo docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
 ```
 
 After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
 
-4. Download [Meter desktop wallet](https://meter.io/developers) and connect to your own full node
+4. Point [Meter desktop wallet](https://meter.io/developers) to your own full node
 In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
 
 ![Adding Your Node in Wallet Settings](./addnode.png)
@@ -162,7 +166,7 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 | 9100                 | node explorers             |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is a different public key than the one generated in the wallet, you could find it under the /pos/public.key file inside the docker container, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
+In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 2 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is the BLS key for the node running the validator, you could find it under the /home/ubuntu/meter-data/public.key, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
@@ -171,38 +175,34 @@ Your node will automatically pick up by our [testnet monitor page](http://monito
 3. Become a delegate node
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/staking/delegates
 
-# Update meter docker image without losing any data/configuration
+# Setting up automatic update for Meter Docker images
+1. Backup meter BLS keys
+If you look into the meter-data directory, there are three files that are important to keep: delegates.json, master.key and public.key.  In addition, there are also several other files and directories in this folder, we suggest you to delete them on the testnet.  This will cause the database to resync
 
-1. Backup meter data/config folder (the following command is only needed when you did not map the host /home/ubuntu/meter-data directory when you started the container)
+We have prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
-sudo docker cp metertest:/pos /home/ubuntu/meter-data
+sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
 ```
-If you look into the meter-data directory, there are three files that are important to keep: delegates.json, master.key and public.key.  There is also file called consensus.key.  It is the BLS key for the last epoch when the node was in the committee.  We suggest removing this file each time when you restart the container.  In addition, there are also several other files and directories in this folder, we suggest you to delete them as well on the testnet.  This will cause the database to resync
 
-2. Stop and delete the current docker container
+# The following steps are not needed if you are running the watchtower
+If you prefer to manage the upgrade manually, you could follow the following instructions：
+
+1. Stop and delete the current docker container
 ```
-sudo docker rm -f metertest
+sudo docker rm -f meter
 ```
 
 3. Pull the latest meter docker image
 ```
-sudo docker pull dfinlab/meter-all-in-one:latest
+sudo docker pull dfinlab/meter-allin:latest
 ```
 
-4. Force Resync block history and remove unused BLS keys (Recommended)
+4. Force Resync block history(Recommended)
 ```
 sudo rm -rf /home/ubuntu/meter-data/instance-9eeef4f05bf08063
-sudo rm -rf consensus.key
 ```
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
-sudo docker run -e DISCO_SERVER="enode://3011a0740181881c7d4033a83a60f69b68f9aedb0faa784133da84394120ffe9a1686b2af212ffad16fbba88d0ff302f8edb05c99380bd904cbbb96ee4ca8cfb@35.160.75.220:55555" -e DISCO_TOPIC="shoal" -e POW_LEADER="35.160.75.220" -e COMMITTEE_SIZE="21" -e DELEGATE_SIZE="21" -v /home/ubuntu/meter-data:/pos --network host --name metertest -d dfinlab/meter-all-in-one:latest
-```
-After step 1 is completed, you will only need to repeat step 2 to 4 each time upgrading the docker image
-
-# Setting up automatic update for Meter Docker images
-We have also prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly (please pay attention to the name "metertest" in the command and change it accordingly if you used a different name for the meter container).
-```
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 metertest
+sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
