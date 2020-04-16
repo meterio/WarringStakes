@@ -199,7 +199,7 @@ sudo docker pull dfinlab/meter-allin:latest
 
 4. Force Resync block history(Recommended)
 ```
-sudo rm -rf /home/ubuntu/meter-data/instance-9eeef4f05bf08063
+sudo rm -rf /home/ubuntu/meter-data/instance-aad99a171ffea4f4
 ```
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
