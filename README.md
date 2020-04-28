@@ -1,54 +1,61 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 3300    |
-| dolphintwo           | 2000    |
-| bentiancai629        | 2000    |
+| huglester            | 3500    |
+| dolphintwo           | 2100    |
+| bentiancai629        | 2100    |
 | includeleec          | 1600    |
-| wetezos              | 1900    |
-| Tomshi               | 2000    |
-| xunppchen (kiwi)     | 1900    |
-| rewseRE(noderunners) | 1700    |
-| Hashquark-research   | 1500    |
-| HeyRoseWu            | 1600    |
-| huluyisheng (Wendy)  | 1500    |
-| bl-mds(BAM)          | 1900    |
+| wetezos              | 2000    |
+| Tomshi               | 2100    |
+| xunppchen (kiwi)     | 2000    |
+| rewseRE(noderunners) | 1800    |
+| Hashquark-research   | 1600    |
+| HeyRoseWu            | 1700    |
+| huluyisheng (Wendy)  | 1600    |
+| bl-mds(BAM)          | 2100    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1300    |
+| sundafa (Nodeasy)    | 1400    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
 | p2p.org              | 1200    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 1500    |
-| DokiaCapital         | 1100    |
-| Inotel               | 1100    |
+| Anthonyhuanggr       | 1700    |
+| DokiaCapital         | 1200    |
+| Inotel               | 1200    |
 | wjdfx(Bit Cat)       | 1000    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
 | TRIXvalidator        | 800     |
 | sll325               | 800     |
-| isillien             | 900     |
+| isillien             | 1000    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 500     |
-| erknfe               | 600     |
-| Kunkomu              | 600     |
-| Freestealer          | 200     |
-| FreshMeters          | 500     |
-| zhongbensuan         | 300     |
+| wukong               | 600     |
+| erknfe               | 700     |
+| Kunkomu              | 700     |
+| Freestealer          | 300     |
+| FreshMeters          | 600     |
+| zhongbensuan         | 400     |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 300     |
+| matrixyz             | 400     |
 | nutkab               | 350     |
-| Blue                 | 350     |
-| Bruce                | 300     |
-| ZavZav               | 200     |
-| Mars                 | 200     |
+| Blue                 | 600     |
+| Bruce                | 400     |
+| ZavZav               | 300     |
+| Mars                 | 300     |
 | Wangq                | 200     |
-| zwchero              | 200     |
-| francz               | 200     |
+| zwchero              | 300     |
+| francz               | 300     |
+| Agrestus             | 200     |
+| Alex                 | 200     |
+| driftas              | 200     |
+| getterlong           | 200     |
+| lagrangey            | 200     |
+| maximka              | 200     |
+| vip                  | 200     |
 
 Social Contributions
 | ID                   | Points  |
@@ -57,7 +64,7 @@ Social Contributions
 | Griya                |  50     |
 | POTsele              |  50     |
 | Fabian               |  90     |
-| Muhamad Erfan        |  160    |
+| Muhamad Erfan        |  360    |
 | 黄国荣                |  40     |
 | 林中白书              |  20     |
 | Craig                |  100    |
