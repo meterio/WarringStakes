@@ -1,61 +1,79 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 3500    |
-| dolphintwo           | 2100    |
-| bentiancai629        | 2100    |
+| huglester            | 4100    |
+| dolphintwo           | 2300    |
+| bentiancai629        | 2300    |
 | includeleec          | 1600    |
-| wetezos              | 2000    |
-| Tomshi               | 2100    |
-| xunppchen (kiwi)     | 2000    |
-| rewseRE(noderunners) | 1800    |
-| Hashquark-research   | 1600    |
-| HeyRoseWu            | 1700    |
-| huluyisheng (Wendy)  | 1600    |
-| bl-mds(BAM)          | 2100    |
+| wetezos              | 2200    |
+| Tomshi               | 2300    |
+| xunppchen (kiwi)     | 2200    |
+| rewseRE(noderunners) | 2000    |
+| Hashquark-research   | 1800    |
+| HeyRoseWu            | 1900    |
+| huluyisheng (Wendy)  | 1800    |
+| bl-mds(BAM)          | 2400    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1400    |
+| sundafa (Nodeasy)    | 1600    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
 | p2p.org              | 1200    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 1700    |
-| DokiaCapital         | 1200    |
-| Inotel               | 1200    |
-| wjdfx(Bit Cat)       | 1000    |
+| Anthonyhuanggr       | 1900    |
+| DokiaCapital         | 1400    |
+| Inotel               | 1400    |
+| wjdfx(Bit Cat)       | 1200    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 800     |
-| sll325               | 800     |
-| isillien             | 1000    |
+| TRIXvalidator        | 1000    |
+| ssl325               | 1000    |
+| isillien             | 1300    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 600     |
-| erknfe               | 700     |
-| Kunkomu              | 700     |
-| Freestealer          | 300     |
-| FreshMeters          | 600     |
-| zhongbensuan         | 400     |
+| wukong               | 800     |
+| erknfe               | 900     |
+| Kunkomu              | 1000    |
+| Firestealer          | 500     |
+| FreshMeters          | 800     |
+| zhongbensuan         | 600     |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 400     |
-| nutkab               | 350     |
+| matrixyz             | 600     |
+| nutkab               | 500     |
 | Blue                 | 600     |
-| Bruce                | 400     |
-| ZavZav               | 300     |
-| Mars                 | 300     |
+| Bruce                | 600     |
+| ZavZav               | 500     |
+| Mars                 | 500     |
 | Wangq                | 200     |
-| zwchero              | 300     |
-| francz               | 300     |
-| Agrestus             | 200     |
+| zwchero              | 500     |
+| francz(franktop)     | 500     |
+| Agrestus             | 400     |
 | Alex                 | 200     |
-| driftas              | 200     |
-| getterlong           | 200     |
-| lagrangey            | 200     |
-| maximka              | 200     |
-| vip                  | 200     |
+| driftas(afisport)    | 400     |
+| getterlong           | 400     |
+| lagrangey            | 400     |
+| maximka              | 400     |
+| vip                  | 400     |
+| ractolechoc5(sl-he)  | 100     |
+| itokenpool(xudoubles)| 100     |
+| docpryof(tylerdow)   | 100     |
+| villiamsivertsen     | 100     |
+| jaroslavrud          | 100     |
+| oligarr              | 100     |
+| olailsen             | 100     |
+| simonhugo(mongeu)    | 100     |
+| contabo(mialnaj)     | 100     |
+| tommywesley          | 100     |
+| felixschulz          | 100     |
+| fredrikmalmqvist     | 100     |
+| launooskuarttu       | 100     |
+| anonstake.com        | 100     |
+| IamS                 | 100     |
+| Janliamnilsson       | 100     |
+| Qiyue                | 100     |
+
 
 Social Contributions
 | ID                   | Points  |
@@ -64,7 +82,7 @@ Social Contributions
 | Griya                |  50     |
 | POTsele              |  50     |
 | Fabian               |  90     |
-| Muhamad Erfan        |  360    |
+| Muhamad Erfan        |  1200   |
 | 黄国荣                |  40     |
 | 林中白书              |  20     |
 | Craig                |  100    |
