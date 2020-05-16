@@ -38,6 +38,16 @@ PoW 链通常需要拥有超过 60 个的区块时，才能创建一个 k 区块
 
 Meter 的 PoW 里的最大区块大小约为1.3MB。Meter 的共识协议以能够在一定程度上根据交易的负荷大小、网络和节点处理速度，在2秒到30秒之间自动调整出块速度。
 
+# 设置Docker
+节点的软件目前以Docker文件的方式发布，可以参照[Ubuntu Docker安装指南](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
+
+如果您用的apt install的方式安装的Docker，缺省系统需要root权限，但是这样可能会带来一些潜在的安全问题，用下面的命令可以给使用docker的用户建立一个专门的用户组群，而不需要root权限。下面的命令假设使用Docker的用户是ubuntu。如果您用的是不同的用户名，需要对应调整命令。
+```
+sudo groupadd docker
+sudo usermod -aG docker ubuntu
+```
+退出当前窗口，重新登陆，用户组群就生效了。
+
 # 配置全节点
 
 当前节点软件是用 docker 镜像来提供的。请参考《 Ubuntu Docker安装指南》。

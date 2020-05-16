@@ -1,78 +1,78 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 4100    |
-| dolphintwo           | 2300    |
-| bentiancai629        | 2300    |
+| huglester            | 4400    |
+| dolphintwo           | 2400    |
+| bentiancai629        | 2400    |
 | includeleec          | 1600    |
-| wetezos              | 2200    |
-| Tomshi               | 2300    |
-| xunppchen (kiwi)     | 2200    |
-| rewseRE(noderunners) | 2000    |
-| Hashquark-research   | 1800    |
-| HeyRoseWu            | 1900    |
-| huluyisheng (Wendy)  | 1800    |
-| bl-mds(BAM)          | 2400    |
+| wetezos              | 2300    |
+| Tomshi               | 2400    |
+| xunppchen (kiwi)     | 2300    |
+| rewseRE(noderunners) | 2100    |
+| Hashquark-research   | 1900    |
+| HeyRoseWu            | 2000    |
+| huluyisheng (Wendy)  | 1900    |
+| bl-mds(BAM)          | 2500    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1600    |
+| sundafa (Nodeasy)    | 1700    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
 | p2p.org              | 1200    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 1900    |
-| DokiaCapital         | 1400    |
-| Inotel               | 1400    |
-| wjdfx(Bit Cat)       | 1200    |
+| Anthonyhuanggr       | 2000    |
+| DokiaCapital         | 1500    |
+| Inotel               | 1500    |
+| wjdfx(Bit Cat)       | 1300    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1000    |
-| ssl325               | 1000    |
-| isillien             | 1300    |
+| TRIXvalidator        | 1100    |
+| ssl325               | 1100    |
+| isillien             | 1450    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 800     |
-| erknfe               | 900     |
-| Kunkomu              | 1000    |
-| Firestealer          | 500     |
-| FreshMeters          | 800     |
-| zhongbensuan         | 600     |
+| wukong               | 900     |
+| erknfe               | 1000     |
+| Kunkomu              | 1100    |
+| Firestealer          | 600     |
+| FreshMeters          | 900     |
+| zhongbensuan         | 700     |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 600     |
-| nutkab               | 500     |
+| matrixyz             | 700     |
+| nutkab               | 650     |
 | Blue                 | 600     |
-| Bruce                | 600     |
-| ZavZav               | 500     |
-| Mars                 | 500     |
+| Bruce                | 700     |
+| ZavZav               | 600     |
+| Mars                 | 600     |
 | Wangq                | 200     |
 | zwchero              | 500     |
-| francz(franktop)     | 500     |
-| Agrestus             | 400     |
+| francz(franktop)     | 600     |
+| Agrestus             | 500     |
 | Alex                 | 200     |
-| driftas(afisport)    | 400     |
-| getterlong           | 400     |
-| lagrangey            | 400     |
-| maximka              | 400     |
-| vip                  | 400     |
-| ractolechoc5(sl-he)  | 100     |
-| itokenpool(xudoubles)| 100     |
-| docpryof(tylerdow)   | 100     |
-| villiamsivertsen     | 100     |
+| driftas(afisport)    | 500     |
+| getterlong           | 500     |
+| lagrangey            | 500     |
+| maximka              | 500     |
+| vip                  | 500     |
+| ractolechoc5(sl-he)  | 200     |
+| itokenpool(xudoubles)| 200     |
+| docpryof(tylerdow)   | 200     |
+| villiamsivertsen     | 200     |
 | jaroslavrud          | 100     |
-| oligarr              | 100     |
+| oligarr              | 200     |
 | olailsen             | 100     |
-| simonhugo(mongeu)    | 100     |
+| simonhugo(mongeu)    | 200     |
 | contabo(mialnaj)     | 100     |
-| tommywesley          | 100     |
+| tommywesley          | 200     |
 | felixschulz          | 100     |
-| fredrikmalmqvist     | 100     |
-| launooskuarttu       | 100     |
-| anonstake.com        | 100     |
-| IamS                 | 100     |
-| Janliamnilsson       | 100     |
-| Qiyue                | 100     |
+| fredrikmalmqvist     | 200     |
+| launooskuarttu       | 200     |
+| anonstake.com        | 200     |
+| IamS                 | 200     |
+| Janliamnilsson       | 200     |
+| Qiyue                | 200     |
 
 
 Social Contributions
@@ -115,8 +115,19 @@ In the test net and initial launch of the main net.  The number of Delegate Node
 Requirements for running a delegate/committee node:
 To achieve the full performance of the Meter network, the recommended hardware configuration is more than 8 compute optimized vCPU, 16GB of memory and 100GB of SSD (AWS c5.2xlarge instance or better).  The maximum block size in Meter is around 1.3MB. It is also recommended to have data center class 1Gbps to 10Gbps internet connection.  However the Meter consensus protocol is capable of adapting to transaction load, network and node processing speed to some extent by varying the block period from 2 sec to up to 30 sec.  The minimum requirement is 2 vCPU and 4GB of memory. When the network has minimum load, the average monthly block data is expected to be about 1.5GB.   
 
-# Setting up a full node
+# Setting up Docker
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
+
+By default, if you installed docker through apt install, it requires root user previlige to run.  However, this may introduce security concerns. It is actually pretty simple to run Docker as non-root user.
+
+Setup Docker usergroup to run Docker as non-root user.  We assumed the non-root user that will be running docker is "ubuntu", please change the commands accordingly if you are using a different user.
+```
+sudo groupadd docker
+sudo usermod -aG docker ubuntu
+```
+After this, please logout and log back in to refresh the user group setting and you will be ready to go.
+
+# Setting up a full node
 
 1. Download the latest [desktop wallet](https://meter.io/developers) and make sure you select the warringstakes tesnet.  
 
@@ -127,9 +138,9 @@ It is recommended to have a host working directory for the container to save imp
 
 If your node has run Meter in the past, please make sure to clean the working directory and remove the container with the following commands.
 ```
-sudo rm -rf meter-data
-sudo docker container rm -f meter-test
-sudo docker container rm -f watchtower
+rm -rf meter-data
+docker container rm -f meter-test
+docker container rm -f watchtower
 ```
 Prepare a clean working directory
 ```
@@ -154,12 +165,12 @@ CONTAINER ID        IMAGE                      COMMAND                  CREATED 
 260bbd571d1a        dfinlab/meter-allin   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             meter
 ```
 ```
-sudo docker container stop meter              //stop the container
-sudo docker container start meter             //start the container
-sudo docker container rm meter                //remove the container
-sudo docker image ls
-sudo docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
-sudo docker container exec -it meter bash     //launch a bash in the container
+docker container stop meter              //stop the container
+docker container start meter             //start the container
+docker container rm meter                //remove the container
+docker image ls
+docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
+docker container exec -it meter bash     //launch a bash in the container
 ```
 
 The log files can be located inside the container, under /var/log/supervisor directory.  If you file any bugs, please remember to attach the logs for PoS (both the stderr and stdout) in the bug. You could either copy and paste the log or use
@@ -206,7 +217,7 @@ If you look into the meter-data directory, there are three files that are import
 
 We have prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
 ```
 
 # The following steps are not needed if you are running the watchtower
@@ -214,12 +225,12 @@ If you prefer to manage the upgrade manually, you could follow the following ins
 
 1. Stop and delete the current docker container
 ```
-sudo docker rm -f meter
+docker rm -f meter
 ```
 
 3. Pull the latest meter docker image
 ```
-sudo docker pull dfinlab/meter-allin:latest
+docker pull dfinlab/meter-allin:latest
 ```
 
 4. Force Resync block history(Recommended)
@@ -229,5 +240,11 @@ sudo rm -rf /home/ubuntu/meter-data/instance-aad99a171ffea4f4
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
-sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+```
+
+# Clean up unused docker images
+As we have frequent upgrades in the testnet.  After a while there maybe a lot of unused container images.  You could use the following commnads to remove unused container images
+```
+docker system prune -af
 ```
