@@ -1,63 +1,63 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 4400    |
+| huglester            | 4800    |
 | dolphintwo           | 2400    |
-| bentiancai629        | 2400    |
+| bentiancai629        | 2600    |
 | includeleec          | 1600    |
 | wetezos              | 2300    |
-| Tomshi               | 2400    |
-| xunppchen (kiwi)     | 2300    |
-| rewseRE(noderunners) | 2100    |
-| Hashquark-research   | 1900    |
+| Tomshi               | 2600    |
+| xunppchen (kiwi)     | 2500    |
+| rewseRE(noderunners) | 2300    |
+| Hashquark-research   | 2100    |
 | HeyRoseWu            | 2000    |
 | huluyisheng (Wendy)  | 1900    |
-| bl-mds(BAM)          | 2500    |
+| bl-mds(BAM)          | 2700    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1700    |
+| sundafa (Nodeasy)    | 1900    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
-| p2p.org              | 1200    |
+| p2p.org              | 1900    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 2000    |
-| DokiaCapital         | 1500    |
-| Inotel               | 1500    |
+| Anthonyhuanggr       | 2200    |
+| DokiaCapital         | 1700    |
+| Inotel               | 1700    |
 | wjdfx(Bit Cat)       | 1300    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1100    |
-| ssl325               | 1100    |
-| isillien             | 1450    |
+| TRIXvalidator        | 1300    |
+| ssl325               | 1300    |
+| isillien             | 1650    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 900     |
-| erknfe               | 1000     |
+| wukong               | 1100     |
+| erknfe               | 1200     |
 | Kunkomu              | 1100    |
-| Firestealer          | 600     |
+| Firestealer          | 800     |
 | FreshMeters          | 900     |
-| zhongbensuan         | 700     |
+| zhongbensuan         | 900     |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 700     |
-| nutkab               | 650     |
-| Blue                 | 600     |
-| Bruce                | 700     |
-| ZavZav               | 600     |
-| Mars                 | 600     |
+| matrixyz             | 900     |
+| nutkab               | 950     |
+| Blue                 | 800     |
+| Bruce                | 900     |
+| ZavZav               | 800     |
+| Mars                 | 800     |
 | Wangq                | 200     |
 | zwchero              | 500     |
 | francz(franktop)     | 600     |
-| Agrestus             | 500     |
+| Agrestus             | 700     |
 | Alex                 | 200     |
-| driftas(afisport)    | 500     |
+| driftas(afisport)    | 700     |
 | getterlong           | 500     |
-| lagrangey            | 500     |
+| lagrangey            | 700     |
 | maximka              | 500     |
-| vip                  | 500     |
+| vip                  | 700     |
 | ractolechoc5(sl-he)  | 200     |
-| itokenpool(xudoubles)| 200     |
+| itokenpool(xudoubles)| 400     |
 | docpryof(tylerdow)   | 200     |
 | villiamsivertsen     | 200     |
 | jaroslavrud          | 100     |
@@ -72,7 +72,7 @@
 | anonstake.com        | 200     |
 | IamS                 | 200     |
 | Janliamnilsson       | 200     |
-| Qiyue                | 200     |
+| Qiyue                | 400     |
 
 
 Social Contributions
@@ -85,8 +85,8 @@ Social Contributions
 | Muhamad Erfan        |  1200   |
 | 黄国荣                |  40     |
 | 林中白书              |  20     |
-| Craig                |  100    |
-| Ivy                  |  500    |
+| Craig                |  150    |
+| Ivy                  |  1000   |
 
 Developer Contributions
 | ID                   | Points  |
