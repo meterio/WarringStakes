@@ -69,7 +69,7 @@
 | felixschulz          | 100     |
 | fredrikmalmqvist     | 200     |
 | launooskuarttu       | 200     |
-| anonstake.com        | 200     |
+| anonstake.com        | 400     |
 | IamS                 | 200     |
 | Janliamnilsson       | 200     |
 | Qiyue                | 400     |
