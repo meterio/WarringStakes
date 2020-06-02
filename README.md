@@ -150,13 +150,14 @@ mkdir meter-data
 3. Launch the Meter container
 
 ```
-sudo docker pull dfinlab/meter-allin:latest;sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker pull dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
 
 Several useful commands for docker:
 
 ```
-sudo docker container ls -a
+docker container ls -a
 
 ```
 The output will be like the following:
@@ -175,7 +176,7 @@ docker container exec -it meter bash     //launch a bash in the container
 
 The log files can be located inside the container, under /var/log/supervisor directory.  If you file any bugs, please remember to attach the logs for PoS (both the stderr and stdout) in the bug. You could either copy and paste the log or use
 ```
-sudo docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
+docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
 ```
 
 After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
@@ -217,7 +218,7 @@ If you look into the meter-data directory, there are three files that are import
 
 We have prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
-docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
+docker run -d --name watchtower --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
 ```
 
 # The following steps are not needed if you are running the watchtower
@@ -240,7 +241,7 @@ sudo rm -rf /home/ubuntu/meter-data/instance-aad99a171ffea4f4
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
-docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
 
 # Clean up unused docker images

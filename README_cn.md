@@ -60,8 +60,8 @@ sudo usermod -aG docker ubuntu
 如果您以前运行过Meter的节点，请务必先删除之前的工作目录和docker容器，可以参考下面的命令
 ```
 sudo rm -rf meter-data
-sudo docker container rm -f meter-test
-sudo docker container rm -f watchtower
+docker container rm -f meter-test
+docker container rm -f watchtower
 ```
 准备一个干净的工作目录
 ```
@@ -70,13 +70,14 @@ mkdir meter-data
 
 2.启动 Meter 容器
 ```
-sudo docker pull dfinlab/meter-allin:latest;sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker pull dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
 ```
 
 对Docker有用的一些命令：
 
 ```
-sudo docker container ls -a
+docker container ls -a
 
 ```
 
@@ -87,16 +88,16 @@ CONTAINER ID        IMAGE                      COMMAND                  CREATED 
 260bbd571d1a        dfinlab/meter-allin   "/usr/bin/supervisord"   23 hours ago        Up 23 hours                             meter
 ```
 ```
-sudo docker container stop meter              //stop the container
-sudo docker container start meter             //start the container
-sudo docker container rm meter                //remove the container
-sudo docker image ls
-sudo docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
-sudo docker container exec -it meter bash     //launch a bash in the container
+docker container stop meter              //stop the container
+docker container start meter             //start the container
+docker container rm meter                //remove the container
+docker image ls
+docker image rm [image ID]                   //remove the container image, will trigger redownloading the image at the next docker run, it is recommended to do this every time we upgrade the testnet
+docker container exec -it meter bash     //launch a bash in the container
 ```
 日志文件可以在 container 的/var/log/supervisor 目录下找到。如果您发现了任何错误，请记得在Github的Issue中附加PoS日志（stderr和stdout）。下面命令可以把Docker Container里的日志文件拷贝的宿主机的当前目录：
 ```
-sudo docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
+docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log file name
 ```
 
 在通过日志确认节点正常运行之后，您可以将桌面钱包连接到您自己的完整节点。
@@ -153,20 +154,19 @@ sudo docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with th
 
 因为测试网上升级比较频繁，为了帮验证节点简化运维负担，我们还提供了一个自动升级容器，当检测到新的容器镜像发布的时候会自动下载镜像并升级(请注意命令行里meter的名字，如果之前启动meter容器的时候用的其它名字)
 ```
-sudo docker pull dfinlab/watchtower:latest;
-sudo docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
+docker run -d --name watchtower --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
 ```
 
 如果是手工升级，可以采用下面的步骤：
 
 1. 停止并删除当前的节点container容器
 ```
-sudo docker rm -f meter
+docker rm -f meter
 ```
 
 2. 获取最新的Meter Doker容器文件镜像
 ```
-sudo docker pull dfinlab/meter-allin:latest
+docker pull dfinlab/meter-allin:latest
 ```
 
 3. 强制重新同步区块（强烈建议做这一步）
@@ -176,5 +176,12 @@ sudo rm -rf /home/ubuntu/meter-data/instance-aad99a171ffea4f4
 
 4. 重启Doker容器，并把备份密钥目录映射到Docker容器内的/pos目录 （-v /home/ubuntu/meter-data:/pos）
 ```
-sudo docker run --network host --name meter -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+```
+
+# 清理不使用的docker镜像文件
+因为测试网上升级比较频繁，一段时间之后可能文件系统中会积攒很多不再使用的docker镜像文件，可以用下面的命令清理
+
+```
+docker system prune -af
 ```
