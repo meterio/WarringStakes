@@ -1,63 +1,65 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 4800    |
+| huglester            | 5100    |
 | dolphintwo           | 2400    |
-| bentiancai629        | 2600    |
+| bentiancai629        | 2700    |
 | includeleec          | 1600    |
-| wetezos              | 2300    |
-| Tomshi               | 2600    |
-| xunppchen (kiwi)     | 2500    |
-| rewseRE(noderunners) | 2300    |
-| Hashquark-research   | 2100    |
+| wetezos              | 2400    |
+| Tomshi               | 2700    |
+| xunppchen (kiwi)     | 2600    |
+| rewseRE(noderunners) | 2400    |
+| Hashquark-research   | 2200    |
 | HeyRoseWu            | 2000    |
-| huluyisheng (Wendy)  | 1900    |
-| bl-mds(BAM)          | 2700    |
+| huluyisheng (Wendy)  | 2000    |
+| bl-mds(BAM)          | 2800    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 1900    |
+| sundafa (Nodeasy)    | 2000    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
-| p2p.org              | 1900    |
+| p2p.org              | 2000    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 2200    |
-| DokiaCapital         | 1700    |
-| Inotel               | 1700    |
+| Anthonyhuanggr       | 2400    |
+| DokiaCapital         | 1800    |
+| Inotel               | 1800    |
 | wjdfx(Bit Cat)       | 1300    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1300    |
-| ssl325               | 1300    |
-| isillien             | 1650    |
+| TRIXvalidator        | 1400    |
+| ssl325               | 1400    |
+| isillien             | 1750    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 1100     |
-| erknfe               | 1200     |
+| wukong               | 1200    |
+| erknfe               | 1300    |
 | Kunkomu              | 1100    |
-| Firestealer          | 800     |
-| FreshMeters          | 900     |
-| zhongbensuan         | 900     |
+| Firestealer          | 900     |
+| FreshMeters          | 1000    |
+| zhongbensuan         | 1000    |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 900     |
+| matrixyz             | 1000    |
 | nutkab               | 950     |
-| Blue                 | 800     |
+| Blue(007)            | 900     |
 | Bruce                | 900     |
-| ZavZav               | 800     |
-| Mars                 | 800     |
+| ZavZav               | 900     |
+| Mars                 | 900     |
 | Wangq                | 200     |
 | zwchero              | 500     |
 | francz(franktop)     | 600     |
-| Agrestus             | 700     |
-| Alex                 | 200     |
-| driftas(afisport)    | 700     |
-| getterlong           | 500     |
+| Agrestus             | 800     |
+| Alex                 | 300     |
+| driftas(afisport)    | 800     |
+| getterlong           | 600     |
 | lagrangey            | 700     |
-| maximka              | 500     |
-| vip                  | 700     |
+| maximka              | 600     |
+| vip                  | 800     |
+| itokenpool(xudoubles)| 500     |
+| Qiyue                | 500     |
+| anonstake.com        | 500     |
 | ractolechoc5(sl-he)  | 200     |
-| itokenpool(xudoubles)| 400     |
 | docpryof(tylerdow)   | 200     |
 | villiamsivertsen     | 200     |
 | jaroslavrud          | 100     |
@@ -69,10 +71,8 @@
 | felixschulz          | 100     |
 | fredrikmalmqvist     | 200     |
 | launooskuarttu       | 200     |
-| anonstake.com        | 400     |
 | IamS                 | 200     |
 | Janliamnilsson       | 200     |
-| Qiyue                | 400     |
 
 
 Social Contributions
@@ -132,9 +132,9 @@ After this, please logout and log back in to refresh the user group setting and 
 1. Download the latest [desktop wallet](https://meter.io/developers) and make sure you select the warringstakes tesnet.  
 
 2. Prepare host working directory for Meter Docker container
-It is recommended to have a host working directory for the container to save important keys and block database, so we could retain them in future upgrades.  We will create a directory called /home/ubuntu/meter-data (you will have to modify accordingly if you have a different directory structure) and map it to the /pos directory inside the container.
+It is recommended to have a host working directory for the container to save important keys and block database, so we could retain them in future upgrades.  We will create a directory called meter-data and set its path to and environment variable called METER_DATA_PATH (you will have to modify accordingly if you have a different directory structure) and map it to the /pos directory inside the container.
 
-(**the following instructions assumes the user operates in /home/ubuntu/. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  
+(**the following instructions assumes the user operates in $METER_DATA_PATH. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  
 
 If your node has run Meter in the past, please make sure to clean the working directory and remove the container with the following commands.
 ```
@@ -144,14 +144,17 @@ docker container rm -f watchtower
 ```
 Prepare a clean working directory
 ```
-mkdir meter-data
+$ mkdir meter-data
+$ cd meter-data/
+$ echo "export METER_DATA_PATH=$PWD" >> ~/.bashrc
+$ source ~/.bashrc
 ```
 
 3. Launch the Meter container
 
 ```
 docker pull dfinlab/meter-allin:latest
-docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v $METER_DATA_PATH:/pos -d dfinlab/meter-allin:latest
 ```
 
 Several useful commands for docker:
@@ -236,12 +239,12 @@ docker pull dfinlab/meter-allin:latest
 
 4. Force Resync block history(Recommended)
 ```
-sudo rm -rf /home/ubuntu/meter-data/instance-aad99a171ffea4f4
+sudo rm -rf $METER_DATA_PATH/instance-aad99a171ffea4f4
 ```
 
 5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
 ```
-docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v /home/ubuntu/meter-data:/pos -d dfinlab/meter-allin:latest
+docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v $METER_DATA_PATH:/pos -d dfinlab/meter-allin:latest
 ```
 
 # Clean up unused docker images
