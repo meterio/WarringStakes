@@ -1,64 +1,65 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 5100    |
+| huglester            | 5400    |
 | dolphintwo           | 2400    |
-| bentiancai629        | 2700    |
+| bentiancai629        | 2800    |
 | includeleec          | 1600    |
-| wetezos              | 2400    |
-| Tomshi               | 2700    |
-| xunppchen (kiwi)     | 2600    |
-| rewseRE(noderunners) | 2400    |
-| Hashquark-research   | 2200    |
+| wetezos              | 2500    |
+| Tomshi               | 2800    |
+| xunppchen (kiwi)     | 2700    |
+| rewseRE(noderunners) | 2500    |
+| Hashquark-research   | 2300    |
 | HeyRoseWu            | 2000    |
-| huluyisheng (Wendy)  | 2000    |
-| bl-mds(BAM)          | 2800    |
+| huluyisheng (Wendy)  | 2100    |
+| bl-mds(BAM)          | 2900    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 2000    |
+| sundafa (Nodeasy)    | 2100    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
-| p2p.org              | 2000    |
+| p2p.org              | 2100    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 2400    |
-| DokiaCapital         | 1800    |
-| Inotel               | 1800    |
+| Anthonyhuanggr       | 2500    |
+| DokiaCapital         | 1900    |
+| Inotel               | 1900    |
 | wjdfx(Bit Cat)       | 1300    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1400    |
-| ssl325               | 1400    |
-| isillien             | 1750    |
+| TRIXvalidator        | 1500    |
+| ssl325               | 1500    |
+| isillien             | 1850    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 1200    |
-| erknfe               | 1300    |
+| wukong               | 1300    |
+| erknfe               | 1400    |
 | Kunkomu              | 1100    |
-| Firestealer          | 900     |
-| FreshMeters          | 1000    |
-| zhongbensuan         | 1000    |
+| Firestealer          | 1000    |
+| FreshMeters          | 1100    |
+| zhongbensuan         | 1100    |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 1000    |
+| matrixyz             | 1100    |
 | nutkab               | 950     |
-| Blue(007)            | 900     |
+| Blue(007)            | 1000    |
 | Bruce                | 900     |
-| ZavZav               | 900     |
-| Mars                 | 900     |
+| ZavZav               | 1000    |
+| Mars                 | 1000    |
 | Wangq                | 200     |
-| zwchero              | 500     |
+| zwchero              | 600     |
 | francz(franktop)     | 600     |
-| Agrestus             | 800     |
-| Alex                 | 300     |
-| driftas(afisport)    | 800     |
-| getterlong           | 600     |
+| Agrestus             | 900     |
+| Alex                 | 400     |
+| driftas(afisport)    | 900     |
+| getterlong           | 700     |
 | lagrangey            | 700     |
-| maximka              | 600     |
+| maximka              | 700     |
 | vip                  | 800     |
-| itokenpool(xudoubles)| 500     |
-| Qiyue                | 500     |
-| anonstake.com        | 500     |
+| itokenpool(xudoubles)| 600     |
+| Qiyue                | 600     |
+| anonstake.com        | 600     |
+| MindHeartSoul        | 200     |
 | ractolechoc5(sl-he)  | 200     |
 | docpryof(tylerdow)   | 200     |
 | villiamsivertsen     | 200     |
