@@ -61,6 +61,8 @@
 | anonstake.com        | 600     |
 | MindHeartSoul        | 200     |
 | yan08                | 200     |
+| Pickle               | 200     |
+| y2labs               | 200     |
 | ractolechoc5(sl-he)  | 200     |
 | docpryof(tylerdow)   | 200     |
 | villiamsivertsen     | 200     |
