@@ -1,67 +1,69 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 5400    |
-| dolphintwo           | 2400    |
+| huglester            | 5800    |
+| dolphintwo           | 2600    |
 | bentiancai629        | 2800    |
 | includeleec          | 1600    |
-| wetezos              | 2500    |
+| wetezos              | 2700    |
 | Tomshi               | 2800    |
-| xunppchen (kiwi)     | 2700    |
+| xunppchen (kiwi)     | 2900    |
 | rewseRE(noderunners) | 2500    |
 | Hashquark-research   | 2300    |
 | HeyRoseWu            | 2000    |
 | huluyisheng (Wendy)  | 2100    |
-| bl-mds(BAM)          | 2900    |
+| bl-mds(BAM)          | 3100    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 2100    |
+| sundafa (Nodeasy)    | 2300    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
-| p2p.org              | 2100    |
+| p2p.org              | 2300    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 2500    |
+| Anthonyhuanggr       | 2700    |
 | DokiaCapital         | 1900    |
 | Inotel               | 1900    |
-| wjdfx(Bit Cat)       | 1300    |
+| wjdfx(Bit Cat)       | 1500    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1500    |
+| TRIXvalidator        | 1700    |
 | ssl325               | 1500    |
-| isillien             | 1850    |
+| isillien             | 2050    |
 | blockventure         | 600     |
 | seqs                 | 600     |
 | wukong               | 1300    |
-| erknfe               | 1400    |
-| Kunkomu              | 1100    |
+| erknfe               | 1600    |
+| Kunkomu              | 1300    |
 | Firestealer          | 1000    |
-| FreshMeters          | 1100    |
+| FreshMeters          | 1400    |
 | zhongbensuan         | 1100    |
 | AliceNode            | 200     |
 | htabs                | 200     |
 | matrixyz             | 1100    |
 | nutkab               | 950     |
-| Blue(007)            | 1000    |
+| Blue(007)            | 1200    |
 | Bruce                | 900     |
 | ZavZav               | 1000    |
-| Mars                 | 1000    |
+| Mars                 | 1200    |
 | Wangq                | 200     |
-| zwchero              | 600     |
+| zwchero              | 700     |
 | francz(franktop)     | 600     |
-| Agrestus             | 900     |
-| Alex                 | 400     |
+| Agrestus             | 1100    |
+| Alex                 | 600     |
 | driftas(afisport)    | 900     |
 | getterlong           | 700     |
 | lagrangey            | 700     |
 | maximka              | 700     |
-| vip                  | 800     |
-| itokenpool(xudoubles)| 600     |
-| Qiyue                | 600     |
-| anonstake.com        | 600     |
-| MindHeartSoul        | 200     |
-| yan08                | 200     |
-| Pickle               | 200     |
+| vip                  | 1000    |
+| itokenpool(xudoubles)| 800     |
+| Qiyue                | 800     |
+| anonstake.com        | 800     |
+| MindHeartSoul        | 400     |
+| yan08(lee)           | 1800    |
+| Pickle               | 400     |
+| aliefaisala          | 200     |
+
 | y2labs               | 200     |
 | ractolechoc5(sl-he)  | 200     |
 | docpryof(tylerdow)   | 200     |
@@ -89,8 +91,9 @@ Social Contributions
 | Muhamad Erfan        |  1200   |
 | 黄国荣                |  40     |
 | 林中白书              |  20     |
-| Craig                |  150    |
+| Craig                |  200    |
 | Ivy                  |  1000   |
+| Blockminer           |  200    |
 
 Developer Contributions
 | ID                   | Points  |
@@ -188,6 +191,8 @@ docker cp meter:/var/log/supervisor/[LogFileNameHere]     //replace with the log
 
 After confirming the node is running properly through the log, you could then connect the desktop wallet to your own full node.
 
+You could compare the with height with the official [Warring Stakes Testnet Explorer](http://scan.warringstakes.meter.io)
+
 4. Point [Meter desktop wallet](https://meter.io/developers) to your own full node
 In the settings of the wallet, under node, you could and connect add your own full node by adding http://IPaddrOfYourNode:8669 .  The icon in the left of the address bar should turn green if everything is running properly.  You could use the explorer inside the wallet to look at the status of the block productions. You should also create an account.  Please make sure you keep the mnemonics in a secure location, you will need them to retrieve your account when we switching between the test nets and it should also work on the future main net.  Please contact a team member to obtain MTRG and MTR test tokens.
 
@@ -210,11 +215,13 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 | 9100                 | node explorers             |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 300 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is the BLS key for the node running the validator, you could find it under the /home/ubuntu/meter-data/public.key, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
+In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 300 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is the BLS key for the node running the validator, you could find it under the $METER_DATA_PATH/public.key, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
 Your node will automatically pick up by our [testnet monitor page](http://monitor.warringstakes.meter.io/d/SmVLEYaZz/node-dashboard?orgId=1&refresh=1s) once you successfully become a candidate.  
+
+Please be aware that the candidate transaction require tokens that are not staked.  If you want to make any changes to the candidate information, currently the system requires to wait at least 7 days. In case you made any mistakes, the fastest way maybe to Uncandidate.  After uncandidate, the tokens will still be in locked mode, you could use them to vote your self, but could not use them to candidate yourself.  If you unbound the tokens, it will take 30 days for these tokens to be unlocked.
 
 3. Become a delegate node
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/staking/delegates
@@ -225,7 +232,7 @@ If you look into the meter-data directory, there are three files that are import
 
 We have prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
-docker run -d --name watchtower --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 meter
+docker run -d --name watchtower --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 --cleanup meter
 ```
 
 # The following steps are not needed if you are running the watchtower
@@ -246,7 +253,7 @@ docker pull dfinlab/meter-allin:latest
 sudo rm -rf $METER_DATA_PATH/instance-aad99a171ffea4f4
 ```
 
-5. Start the container and mount the host data backup folder to the pos folder inside the container -v /home/ubuntu/meter-data:/pos
+5. Start the container and mount the host data backup folder to the pos folder inside the container -v  $METER_DATA_PATH:/pos
 ```
 docker run --network host --name meter --restart always -e NETWORK="warringstakes" -v $METER_DATA_PATH:/pos -d dfinlab/meter-allin:latest
 ```
