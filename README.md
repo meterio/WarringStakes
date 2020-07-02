@@ -47,7 +47,7 @@
 | ZavZav               | 1000    |
 | Mars                 | 1200    |
 | Wangq                | 200     |
-| zwchero              | 700     |
+| zwchero              | 600     |
 | francz(franktop)     | 600     |
 | Agrestus             | 1100    |
 | Alex                 | 600     |
@@ -63,7 +63,6 @@
 | yan08(lee)           | 1800    |
 | Pickle               | 400     |
 | aliefaisala          | 200     |
-
 | y2labs               | 200     |
 | ractolechoc5(sl-he)  | 200     |
 | docpryof(tylerdow)   | 200     |
