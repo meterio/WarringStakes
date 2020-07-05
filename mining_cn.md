@@ -139,7 +139,7 @@ daemon 的部分程序中的 Meter 值应该配置如下：
 
     "daemons": [
         {
-            "host": "c01.meter.io",
+            "host": "c04.meter.io",
             "port": 8332,
             "user": "testuser",
             "password": "testpass"
@@ -149,6 +149,8 @@ daemon 的部分程序中的 Meter 值应该配置如下：
     ...
 
 ```
+上面的c04.meter.io只是我们提供的一个测试节点，不能保证永远在线。如果您想运行矿池的话，应该根据主网的节点运行指南跑一个全节点，并把矿池指向自己的全节点。
+
 在 Meter 网络的Nomp当前提供的部分的功能状态下,`meter.json`中的很多其他的字段可以暂时忽略。
 
 启动端口
