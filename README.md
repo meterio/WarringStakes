@@ -12,7 +12,7 @@
 | Hashquark-research   | 2300    |
 | HeyRoseWu            | 2000    |
 | huluyisheng (Wendy)  | 2100    |
-| bl-mds(BAM)          | 3100    |
+| bl-mds(BAM)          | 3300    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
 | sundafa (Nodeasy)    | 2500    |
