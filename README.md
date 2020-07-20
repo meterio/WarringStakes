@@ -1,13 +1,13 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 5800    |
-| dolphintwo           | 2600    |
+| huglester            | 6200    |
+| dolphintwo           | 2800    |
 | bentiancai629        | 2800    |
 | includeleec          | 1600    |
-| wetezos              | 2700    |
+| wetezos              | 2900    |
 | Tomshi               | 2800    |
-| xunppchen (kiwi)     | 2900    |
+| xunppchen (kiwi)     | 3100    |
 | rewseRE(noderunners) | 2500    |
 | Hashquark-research   | 2300    |
 | HeyRoseWu            | 2000    |
@@ -15,55 +15,55 @@
 | bl-mds(BAM)          | 3100    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 2300    |
+| sundafa (Nodeasy)    | 2500    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
-| p2p.org              | 2300    |
+| p2p.org              | 2500    |
 | yasyazb(flybird)     | 900     |
-| Anthonyhuanggr       | 2700    |
+| Anthonyhuanggr       | 2900    |
 | DokiaCapital         | 1900    |
 | Inotel               | 1900    |
-| wjdfx(Bit Cat)       | 1500    |
+| wjdfx(Bit Cat)       | 1700    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 1700    |
-| ssl325               | 1500    |
-| isillien             | 2050    |
+| TRIXvalidator        | 1900    |
+| ssl325               | 1700    |
+| isillien             | 2250    |
 | blockventure         | 600     |
 | seqs                 | 600     |
 | wukong               | 1300    |
-| erknfe               | 1600    |
-| Kunkomu              | 1300    |
+| erknfe               | 1800    |
+| Kunkomu              | 1500    |
 | Firestealer          | 1000    |
 | FreshMeters          | 1400    |
 | zhongbensuan         | 1100    |
 | AliceNode            | 200     |
 | htabs                | 200     |
 | matrixyz             | 1100    |
-| nutkab               | 950     |
-| Blue(007)            | 1200    |
+| nutkab               | 1100    |
+| Blue(007)            | 1400    |
 | Bruce                | 900     |
-| ZavZav               | 1000    |
-| Mars                 | 1200    |
+| ZavZav               | 1200    |
+| Mars                 | 1400    |
 | Wangq                | 200     |
-| zwchero              | 600     |
-| francz(franktop)     | 600     |
-| Agrestus             | 1100    |
-| Alex                 | 600     |
+| zwchero              | 800     |
+| francz(franktop)     | 800     |
+| Agrestus             | 1200    |
+| Alex                 | 800     |
 | driftas(afisport)    | 900     |
 | getterlong           | 700     |
 | lagrangey            | 700     |
-| maximka              | 700     |
-| vip                  | 1000    |
-| itokenpool(xudoubles)| 800     |
+| maximka              | 900     |
+| vip                  | 1200    |
+| itokenpool(xudoubles)| 1000    |
 | Qiyue                | 800     |
-| anonstake.com        | 800     |
-| MindHeartSoul        | 400     |
-| yan08(lee)           | 1800    |
-| Pickle               | 400     |
-| aliefaisala          | 200     |
-| y2labs               | 200     |
+| anonstake.com        | 1000    |
+| MindHeartSoul        | 600     |
+| yan08(lee)           | 2600    |
+| Pickle               | 600     |
+| aliefaisala          | 400     |
+| y2labs               | 400     |
 | ractolechoc5(sl-he)  | 200     |
 | docpryof(tylerdow)   | 200     |
 | villiamsivertsen     | 200     |
@@ -78,6 +78,12 @@
 | launooskuarttu       | 200     |
 | IamS                 | 200     |
 | Janliamnilsson       | 200     |
+| slsub                | 100     |
+| 0ABC                 | 100     |
+| agaphone!            | 100     |
+| slsub                | 100     |
+| GasMeter             | 100     |
+| koa                  | 100     |
 
 
 Social Contributions
