@@ -6,7 +6,7 @@
 | bentiancai629        | 2800    |
 | includeleec          | 1600    |
 | wetezos              | 3100    |
-| Tomshi               | 3000    |
+| Tomshi               | 2800    |
 | xunppchen (kiwi)     | 3300    |
 | rewseRE(noderunners) | 2500    |
 | Hashquark-research   | 2300    |
@@ -37,7 +37,7 @@
 | Kunkomu              | 1500    |
 | Firestealer          | 1000    |
 | FreshMeters          | 1400    |
-| zhongbensuan         | 1300    |
+| zhongbensuan         | 1200    |
 | AliceNode            | 200     |
 | htabs                | 200     |
 | matrixyz             | 1300    |
