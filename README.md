@@ -1,21 +1,21 @@
 # Warring Stakes Leader Board
 | Git Handle           | Points  |
 |----------------------|---------|
-| huglester            | 6800    |
-| dolphintwo           | 3000    |
+| huglester            | 7100    |
+| dolphintwo           | 3300    |
 | bentiancai629        | 2800    |
 | includeleec          | 1600    |
-| wetezos              | 3100    |
-| Tomshi               | 2800    |
-| xunppchen (kiwi)     | 3300    |
+| wetezos              | 3400    |
+| Tomshi               | 3200    |
+| xunppchen (kiwi)     | 3600    |
 | rewseRE(noderunners) | 2500    |
 | Hashquark-research   | 2300    |
 | HeyRoseWu            | 2000    |
 | huluyisheng (Wendy)  | 2100    |
-| bl-mds(BAM)          | 3300    |
+| bl-mds(BAM)          | 3700    |
 | mstephen5            | 1000    |
 | olbk1915(zbx001)     | 1100    |
-| sundafa (Nodeasy)    | 2700    |
+| sundafa (Nodeasy)    | 3000    |
 | r808-m (pupu)        | 1100    |
 | usnggogogo(easystake)| 1100    |
 | vanguard             | 1200    |
@@ -27,41 +27,41 @@
 | wjdfx(Bit Cat)       | 1700    |
 | ercwangwh(ercw)      | 700     |
 | tashalin88(Forward)  | 500     |
-| TRIXvalidator        | 2100    |
-| ssl325               | 1900    |
-| isillien             | 2450    |
+| TRIXvalidator        | 2400    |
+| ssl325               | 2100    |
+| isillien             | 2650    |
 | blockventure         | 600     |
 | seqs                 | 600     |
-| wukong               | 1500    |
-| erknfe               | 2000    |
-| Kunkomu              | 1500    |
+| wukong               | 1700    |
+| erknfe               | 2300    |
+| Kunkomu              | 1800    |
 | Firestealer          | 1000    |
 | FreshMeters          | 1400    |
 | zhongbensuan         | 1200    |
 | AliceNode            | 200     |
 | htabs                | 200     |
-| matrixyz             | 1300    |
+| matrixyz             | 1500    |
 | nutkab               | 1100    |
-| Blue(007)            | 1400    |
-| Bruce                | 900     |
-| ZavZav               | 1400    |
-| Mars                 | 1600    |
+| Blue(007)            | 1700    |
+| Bruce                | 1100    |
+| ZavZav               | 1600    |
+| Mars                 | 2000    |
 | Wangq                | 200     |
 | zwchero              | 800     |
-| francz(franktop)     | 1000    |
-| Agrestus             | 1300    |
+| francz(franktop)     | 1300    |
+| Agrestus             | 1600    |
 | Alex                 | 1000    |
 | driftas(afisport)    | 900     |
 | getterlong           | 700     |
 | lagrangey            | 700     |
-| maximka              | 1100    |
-| vip                  | 1400    |
-| itokenpool(xudoubles)| 1200    |
+| maximka              | 1300    |
+| vip                  | 1600    |
+| itokenpool(xudoubles)| 1500    |
 | Qiyue                | 800     |
 | anonstake.com        | 1000    |
-| MindHeartSoul        | 800     |
-| yan08(lee)           | 3400    |
-| Pickle               | 800     |
+| MindHeartSoul        | 1100    |
+| yan08(lee)           | 3800    |
+| Pickle               | 1100    |
 | aliefaisala          | 400     |
 | y2labs               | 400     |
 | ractolechoc5(sl-he)  | 200     |
@@ -78,18 +78,18 @@
 | launooskuarttu       | 200     |
 | IamS                 | 400     |
 | Janliamnilsson       | 200     |
-| slsub                | 300     |
+| slsub                | 600     |
 | 0ABC                 | 100     |
 | agaphone!            | 100     |
 | slsub                | 100     |
 | GasMeter             | 100     |
-| koa                  | 100     |
+| koa                  | 300     |
 | merlin               | 200     |
-| goto                 | 200     |
-| beezneez             | 200     |
-| stakin               | 200     |
-| jagon                | 200     |
-| BePositiV            | 200     |
+| goto                 | 500     |
+| beezneez             | 500     |
+| stakin(EdouardLvdl)  | 200     |
+| jagon                | 500     |
+| BePositiV            | 500     |
 | 0ABC                 | 200     |
 
 
