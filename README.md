@@ -113,13 +113,14 @@ Developer Contributions
 | Skeyili1Liaaeeeyyr   |  500    |
 
 # Instructions for Participating in the Meter Test Net
-If you haven't, please complete the [validator application form](https://metervalidators.typeform.com/to/yVVUDw) with your Meter wallet address.  Please be aware that the Warring Stakes Testnet is a separate test net from the default wallet configuration and the explorer on our website.  You will have to add your node in the wallet and connect to it to see the Warring Stakes Testnet (Selecting the your own node in the main interface) Please also remember to comment on the Github Issue 1 of your validator.  
+If you haven't, please complete the complete the [KYC form](https://form.typeform.com/to/BJ9tdMQp) if you want to receive the testnet incentive.  The testnet is however completely permissionless and we welcome any abuses.
+If you are running your own validator node, it is highly advised to connect the official Meter Wallet to your own node, so you have the most secure and up to date view of the network. Please also remember to comment on the Github Issue 1 of your validator.  
 
 # Overview
 Meter is a hybrid PoW and PoS blockchain system with dual chain structure.  All the accounts and transactions are recorded on the PoS chain while PoW chain (currently a modified version of Bitcoin starting from the same genesis of Bitcoin) just maintains the crypto puzzles for mining. The PoW chain submits the solutions for the crypto puzzles to the PoS chain and the winning miners receive reward on their accounts on the PoS chain.  
 
 Epoch:
-Meter operates on epochs, which are signaled by k-blocks (regular blocks are called m-blocks).  At the end of epoch, the committee nodes vote on the longest PoW chain and distribute mining rewards to all the PoW miners, it also pass the information to the PoW chain and all the PoW miners will have to start mining for the stamped PoW block.  To create a k-block, the PoW chain typically has to have more than 60 blocks.  Since the average PoW block period is 1 minute, each epoch is therefore around 1 hour (currently the time for epoch is completely decided by PoW, but we will implement cross interactions for epoch adjustments in the future).  On the Warring Stakes test net, we reduced the epoch period to be around 4 minutes to speed up the reproduction of potential bugs.  All system financial related activities like reward distribution, entering and exiting the delegate node pool only happens at k-blocks.     
+Meter operates on epochs, which are signaled by k-blocks (regular blocks are called m-blocks).  At the end of epoch, the committee nodes vote on the longest PoW chain and distribute mining rewards to all the PoW miners, it also pass the information to the PoW chain and all the PoW miners will have to start mining for the stamped PoW block.  To create a k-block, the PoW chain typically has to have more than 60 blocks.  Since the average PoW block period is 1 minute, each epoch is therefore around 1 hour (currently the time for epoch is completely decided by PoW, but we will implement cross interactions for epoch adjustments in the future).  All system financial related activities like reward distribution, entering and exiting the delegate node pool only happens at k-blocks.     
 
 It is also required to run both PoS and PoW processes on the same physical or virtual machine to ensure security.
 
@@ -131,13 +132,20 @@ In Meter, there are several types of full nodes in the network:
 In the test net and initial launch of the main net.  The number of Delegate Nodes will be the same as the number of the committee nodes.  In the future, there maybe a subset of nodes with better performance and network connectivity dedicated as the leaders in the committee nodes.
 
 
-Requirements for running a delegate/committee node:
-To achieve the full performance of the Meter network, the recommended hardware configuration is more than 8 compute optimized vCPU, 16GB of memory and 100GB of SSD (AWS c5.2xlarge instance or better).  The maximum block size in Meter is around 1.3MB. It is also recommended to have data center class 1Gbps to 10Gbps internet connection.  However the Meter consensus protocol is capable of adapting to transaction load, network and node processing speed to some extent by varying the block period from 2 sec to up to 30 sec.  The minimum requirement is 2 vCPU and 4GB of memory. When the network has minimum load, the average monthly block data is expected to be about 1.5GB.   
+# Requirements for running a delegate/committee node:
+To achieve the full performance of the Meter network, the ideal hardware configuration is more than 8 compute optimized vCPU, 16GB of memory and 500GB of SSD (AWS c5.2xlarge instance or better).  The maximum block size in Meter is around 1.3MB.   However the Meter consensus protocol is capable of adapting to transaction load, network and node processing speed to some extent by varying the block period from 2 sec to up to 30 sec.  The minimum requirement is 2 vCPU and 4GB of memory (a $20~$40/month AWS lightsail nodes). When the network has minimum load, the average monthly block data is expected to be about 1.5GB. We highly recommend the validators to use the same setup as the mainnet.  In addition, please try avoid running nodes behind the country firewalls like the Great Firewall of China.  If your node has connectivity issues with other nodes, it may receive penalty points and get jailed.
+
+# Testnet Incentives
+To help validators bootstrap the requirements for validator nodes and properly align the interests, all testnet incentive tokens will be distributed with a 6480 epoch lock(around 270 days).  You could stake these tokens for candidates and votes, but will not be able to send them to other addresses.  Each week of the final warringstakes testnet, we will distribute 15,000 points (1 point = 1 MTRG) and split them among validators who have maintained the nodes properly by weight.  The base weight for each correctly maintained validator node is 1.  If a validator(based on KYC) starts multiple nodes, their weight goes up by 1 for every 2 additional nodes.  To make the game fair for everyone, the maximum weight per KYCed validator will be 3.
+Each reported and validated testnet bug may qualify for additional 100 to 500 points depend on its severity.  We target to run the testnet for 2 to 3 weeks before flip the switch to mainnet.  
+
+# Testnet faucets
+You could claim testnet tokens from [the testnet faucet](https://faucet-warringstakes.meter.io)
 
 # Setting up Docker
 Node software is currently provided as docker images.  Please refer to [Ubuntu Docker Installation Guide](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04).
 
-By default, if you installed docker through apt install, it requires root user previlige to run.  However, this may introduce security concerns. It is actually pretty simple to run Docker as non-root user.
+By default, if you installed docker through apt install, it requires root user privilege to run.  However, this may introduce security concerns. It is highly recommended to run Docker as non-root user.
 
 Setup Docker usergroup to run Docker as non-root user.  We assumed the non-root user that will be running docker is "ubuntu", please change the commands accordingly if you are using a different user.
 ```
@@ -227,11 +235,13 @@ Becoming a delegate node requires staking MTRG tokens.  You will have to have bo
 | 9100                 | node explorers             |
 
 2. Become a candidate
-In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 300 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node and also submit the public key used to sign the block proposals (this is the BLS key for the node running the validator, you could find it under the $METER_DATA_PATH/public.key, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.
+In the desktop wallet, under the "Candidates" tab, you could self elect to be a candidate for delegate node by staking at least 2000 MTRG tokens and input all the required information for your node.  When filling in the "Candidate" page, you will have to name your validator, put in the IP address of your node, select whether you want to system to automatically participate in the onchain MTRG auction for you (enable autobid) and also submit the public key used to sign the block proposals (this is the BLS key for the node running the validator, you could find the key in $METER_DATA_PATH/public.key file, its corresponding private key is in the master.key file) You could have other accounts delegate their votes to you as well to increase the chance of becoming a delegate node.  The candidate transaction is recorded immediately and the node could start to receive votes.  However, the votes won't be counted until the next k-block even with enough votes.  You could check the list of candidate nodes through http://IPaddrOfYourNode:8669/staking/candidates or inside the wallet.  
+
+The votes for each validator automatically increases at 5% annualized rate to encourage validator to stay in long term. if you uncandidate and recandidate, you will lose these bonus votes.  Whenever you uncandidate and undelegate, it will take one week before the tokens become unbounded and transferrable.
 
 Please be aware that the public.key file in the docker container is generated when the container is launched.  If you start a container from scratch, the public.key will be different from the one you used for the "Candidate" transaction.  You could either "Uncandidate" and "Candidate" again with the new public key or change the public key to the one you used before.
 
-Your node will automatically pick up by our [testnet monitor page](http://monitor.warringstakes.meter.io/d/SmVLEYaZz/node-dashboard?orgId=1&refresh=1s) once you successfully become a candidate.  
+Your node will automatically pick up by our [Meter Scan](https://scan-warringstakes.meter.io/pos) once you successfully become a candidate.  
 
 Please be aware that the candidate transaction require tokens that are not staked.  If you want to make any changes to the candidate information, currently the system requires to wait at least 7 days. In case you made any mistakes, the fastest way maybe to Uncandidate.  After uncandidate, the tokens will still be in locked mode, you could use them to vote your self, but could not use them to candidate yourself.  If you unbound the tokens, it will take 30 days for these tokens to be unlocked.
 
