@@ -156,12 +156,12 @@ After this, please logout and log back in to refresh the user group setting and 
 
 # Setting up a full node
 
-1. Download the latest [desktop wallet](https://meter.io/developers) and make sure you select the warringstakes tesnet.  
+1. Download the latest [desktop wallet](https://meter.io/wallet) and make sure you select the warringstakes testnet.  There will be a new wallet release right before the testnet.  Please make sure your wallet version is 1.2.1, otherwise you may not be able to interact with the testnet properly
 
 2. Prepare host working directory for Meter Docker container
 It is recommended to have a host working directory for the container to save important keys and block database, so we could retain them in future upgrades.  We will create a directory called meter-data and set its path to and environment variable called METER_DATA_PATH (you will have to modify accordingly if you have a different directory structure) and map it to the /pos directory inside the container.
 
-(**the following instructions assumes the user operates in $METER_DATA_PATH. Please pay attention to the parameters in the commands and replace the path accordingly to your environment,  especially the path after -v in docker run commands**).  
+(**the following instructions assumes the user operates in $METER_DATA_PATH. Please pay attention to the parameters in the commands and replace the path accordingly to your environment, especially the path after -v in docker run commands**).  
 
 If your node has run Meter in the past, please make sure to clean the working directory and remove the container with the following commands.
 ```
