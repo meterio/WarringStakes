@@ -248,7 +248,7 @@ Please be aware that the candidate transaction require tokens that are not stake
 3. Become a delegate node
 If a candidate receives enough votes and ranked in the top N candidate nodes, it will become a delegate node. You could find the list of delegates through http://IPaddrOfYourNode:8669/staking/delegates
 
-# Setting up automatic update for Meter Docker images
+# Setting up automatic update for Meter Docker images (Please make sure to do this on testnet)
 1. Backup meter BLS keys
 If you look into the meter-data directory, there are three files that are important to keep: delegates.json, master.key and public.key.  In addition, there are also several other files and directories in this folder, we suggest you to delete them on the testnet.  This will cause the database to resync
 
@@ -256,6 +256,7 @@ We have prepared a watchtower container which will automatically check if there 
 ```
 docker run -d --name watchtower --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --include-stopped --revive-stopped --enable-lifecycle-hooks --interval 10 --cleanup meter
 ```
+Please make sure you run the watchtower on testnet as we have very frequent upgrades.
 
 # The following steps are not needed if you are running the watchtower
 If you prefer to manage the upgrade manually, you could follow the following instructions：
@@ -285,3 +286,7 @@ As we have frequent upgrades in the testnet.  After a while there maybe a lot of
 ```
 docker system prune -af
 ```
+
+# Monitor the testnet status
+You could look at the most current block height of your node through http://IPaddrOfYourNode:8670/probe and make sure the block height is in sync with the explorer
+We also have a [monitor](https://monitor-warringstakes.meter.io/d/SmVLEYaZz/warringstakes-dashboard?orgId=1&refresh=5s) site to look at the status of different nodes in the network.  As validators are still getting familiar with Meter, slashing will not be enabled initially on the network, instead we introduced a jailing concept to remove unperforming validators. The current rule of jailing on Meter is if a node has missed more than 3 proposals in any of the last eight epochs for two times, missed to organize the committee for 2 times or double signed once.  Once a node is jailed, it takes 10 MTRG to revive it from the jailed states.  You could complete this with the "bail out" option on the top right corner of the Meter Wallet.
