@@ -138,6 +138,7 @@ To achieve the full performance of the Meter network, the ideal hardware configu
 # Testnet Incentives
 To help validators bootstrap the requirements for validator nodes and properly align the interests, all testnet incentive tokens will be distributed with a 6480 epoch lock(around 270 days).  You could stake these tokens for candidates and votes, but will not be able to send them to other addresses.  Each week of the final warringstakes testnet, we will distribute 15,000 points (1 point = 1 MTRG) and split them among validators who have maintained the nodes properly by weight.  The base weight for each correctly maintained validator node is 1.  If a validator(based on KYC) starts multiple nodes, their weight goes up by 1 for every 2 additional nodes.  To make the game fair for everyone, the maximum weight per KYCed validator will be 3.
 Each reported and validated testnet bug may qualify for additional 100 to 500 points depend on its severity.  We target to run the testnet for 2 to 3 weeks before flip the switch to mainnet.  
+We will make snapshot every week at random time of the validator list and publish the updates on participants weight on a [google sheet](https://docs.google.com/spreadsheets/d/11vzWaDSq7eZ8LoOam1ve4VKJv2lfZ6tYe5EpLVkdB_0/edit#gid=2146474771)  Please reach out to @jenniferkong on discord for any KYC related questions.
 
 # Testnet faucets
 You could claim testnet tokens from [the testnet faucet](https://faucet-warringstakes.meter.io)
@@ -250,7 +251,7 @@ If a candidate receives enough votes and ranked in the top N candidate nodes, it
 
 # Setting up automatic update for Meter Docker images (Please make sure to do this on testnet)
 1. Backup meter BLS keys
-If you look into the meter-data directory, there are three files that are important to keep: delegates.json, master.key and public.key.  In addition, there are also several other files and directories in this folder, we suggest you to delete them on the testnet.  This will cause the database to resync
+If you look into the meter-data directory, there are three files that are important to keep: master.key, public.key and p2p.key.  In addition, there are also several other files and directories in this folder, we suggest you to delete them on the testnet.  This will cause the database to resync
 
 We have prepared a watchtower container which will automatically check if there is any newly released docker image for Meter and upgrade accordingly.
 ```
