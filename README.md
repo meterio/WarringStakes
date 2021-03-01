@@ -167,7 +167,7 @@ It is recommended to have a host working directory for the container to save imp
 If your node has run Meter in the past, please make sure to clean the working directory and remove the container with the following commands.
 ```
 rm -rf meter-data
-docker container rm -f meter-test
+docker container rm -f meter
 docker container rm -f watchtower
 ```
 Prepare a clean working directory
